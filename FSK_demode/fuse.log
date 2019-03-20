@@ -1,0 +1,70 @@
+Running: E:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/ISEproject/phase_band_top3/test_jidai_isim_beh.exe -prj E:/ISEproject/phase_band_top3/test_jidai_beh.prj work.test_jidai work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/ISEproject/phase_band_top3/ipcore_dir/cordic.v" into library work
+Analyzing Verilog file "E:/ISEproject/phase_band_top3/ipcore_dir/mycordic.v" into library work
+WARNING:HDLCompiler:687 - "E:/ISEproject/phase_band_top3/ipcore_dir/mycordic.v" Line 10756: Illegal redeclaration of module <glbl>.
+Analyzing Verilog file "E:/ISEproject/phase_band_top3/ipcore_dir/divider.v" into library work
+WARNING:HDLCompiler:687 - "E:/ISEproject/phase_band_top3/ipcore_dir/divider.v" Line 40418: Illegal redeclaration of module <glbl>.
+Analyzing Verilog file "E:/ISEproject/phase_band_top3/phase_band_top2.v" into library work
+Analyzing Verilog file "E:/ISEproject/phase_band_top3/ipcore_dir/ROM2.v" into library work
+Analyzing Verilog file "E:/ISEproject/phase_band_top3/ipcore_dir/ROM.v" into library work
+Analyzing Verilog file "E:/ISEproject/phase_band_top3/Gardner_1.v" into library work
+Analyzing Verilog file "E:/ISEproject/phase_band_top3/filter.v" into library work
+Analyzing Verilog file "E:/ISEproject/phase_band_top3/downsample.v" into library work
+Analyzing Verilog file "E:/ISEproject/phase_band_top3/counter.v" into library work
+Analyzing Verilog file "E:/ISEproject/phase_band_top3/clk_div.v" into library work
+Analyzing Verilog file "E:/ISEproject/phase_band_top3/bit_syn.v" into library work
+Analyzing Verilog file "E:/ISEproject/phase_band_top3/test_jidai.v" into library work
+Analyzing Verilog file "E:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+WARNING:HDLCompiler:687 - "E:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" Line 5: Illegal redeclaration of module <glbl>.
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "E:/ISEproject/phase_band_top3/bit_syn.v" Line 57: Port t1 is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:/ISEproject/phase_band_top3/bit_syn.v" Line 60: Port rst_n is not connected to this instance
+WARNING:HDLCompiler:189 - "E:/ISEproject/phase_band_top3/phase_band_top2.v" Line 197: Size mismatch in connection of port <x_in>. Formal port size is 41-bit while actual signal size is 42-bit.
+Completed static elaboration
+Compiling module counter
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_AXI_TYPE=1,C_...
+Compiling module ROM
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_AXI_TYPE=1,C_...
+Compiling module ROM2
+Compiling module VCC
+Compiling module GND
+Compiling module FDR
+Compiling module FD
+Compiling module LUT6(INIT=64'b111000101110001011...
+Compiling module LUT5(INIT=32'b101000001000100001...
+Compiling module LUT3(INIT=8'b01000110)
+Compiling module INV
+Compiling module LUT1(INIT=2'b10)
+Compiling module LUT2(INIT=4'b0110)
+Compiling module MUXCY
+Compiling module XORCY
+Compiling module FDE
+Compiling module cordic
+Compiling module FDRE
+Compiling module mycordic
+Compiling module SRLC16E(INIT=16'b01)
+Compiling module SRLC32E
+Compiling module divider
+Compiling module phase_band_top
+Compiling module filter
+Compiling module downsample
+Compiling module Gardner_1
+Compiling module clk_div
+Compiling module bit_syn
+Compiling module test_jidai
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 19 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: 系统找不到指定的路径。, "isim\test_jidai_isim_beh.exe.sim\libPortability.dll".
+Compiled 58 Verilog Units
+Built simulation executable E:/ISEproject/phase_band_top3/test_jidai_isim_beh.exe
+Fuse Memory Usage: 53456 KB
+Fuse CPU Usage: 2202 ms

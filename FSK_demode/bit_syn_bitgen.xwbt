@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\phase_band_top3\bit_syn.ncd
+OUTFILE=D:\phase_band_top3\bit_syn.bit
+FAMILY=Virtex6
+PART=xc6vlx240t-2ff1156
+WORKINGDIR=D:\phase_band_top3
+LICENSE=ISE
+USER_INFO=__0_0_0

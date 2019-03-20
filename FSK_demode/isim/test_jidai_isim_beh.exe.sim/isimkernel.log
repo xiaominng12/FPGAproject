@@ -1,0 +1,28 @@
+Command line:
+   test_jidai_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  35337
+
+Wed Jul 18 17:30:24 2018
+
+
+ Elaboration Time: 1.04688 sec
+
+ Current Memory Usage: 1190.2 Meg
+
+ Total Signals          : 43543
+ Total Nets             : 16330
+ Total Signal Drivers   : 16632
+ Total Blocks           : 11885
+ Total Primitive Blocks : 10044
+ Total Processes        : 29419
+ Total Traceable Variables  : 20436
+ Total Scalar Nets and Variables : 973359
+
+ Total Simulation Time: 1.60938 sec
+
+ Current Memory Usage: 1190.2 Meg
+
+Wed Jul 18 17:30:37 2018
+

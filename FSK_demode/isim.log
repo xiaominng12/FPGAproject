@@ -1,0 +1,17 @@
+ISim log file
+Running: E:\ISEproject\phase_band_top3\test_jidai_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/ISEproject/phase_band_top3/test_jidai_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+WARNING: File "E:/ISEproject/phase_band_top3/phase_band_top2.v" Line 64.  For instance phase_band_top/mycordic/, width 41 of formal port x_in is not equal to width 42 of actual signal I_Q_pll1.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module test_jidai.uut.ROM.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module test_jidai.uut.ROM2.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Finished circuit initialization process.

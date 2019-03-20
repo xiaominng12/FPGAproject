@@ -1,0 +1,15 @@
+# Output products list for <mycordic>
+_xmsgs\pn_parser.xmsgs
+mycordic.asy
+mycordic.gise
+mycordic.ngc
+mycordic.sym
+mycordic.v
+mycordic.veo
+mycordic.xco
+mycordic.xise
+mycordic\doc\cordic_ds249.pdf
+mycordic\doc\cordic_v4_0_vinfo.html
+mycordic_flist.txt
+mycordic_readme.txt
+mycordic_xmdf.tcl

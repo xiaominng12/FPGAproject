@@ -1,0 +1,4 @@
+verilog work "ipcore_dir/mycordic.v"
+verilog work "ipcore_dir/divider.v"
+verilog work "ipcore_dir/cordic.v"
+verilog work "phase_band_top2.v"

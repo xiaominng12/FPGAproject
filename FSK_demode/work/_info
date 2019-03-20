@@ -1,0 +1,385 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:\ISEproject\phase_band_top3
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+V[G;7J^EPg6?6O;mjmKPEG0
+Z1 04 10 4 work test_jidai fast 0
+Z2 04 4 4 work glbl fast 0
+=1-70c94ef2b061-5b600786-3e0-1128
+Z3 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+Z4 OL;O;10.2;57
+Z5 dE:\ISEproject\phase_band_top3
+!s110 1533020041
+T_opt1
+V6AhISS1;R44>o@8h`?Oo93
+R1
+R2
+=1-70c94ef2b061-5b5d6a5d-3cf-2130
+R3
+n@_opt1
+R4
+R5
+!s110 1532848736
+T_opt2
+V9UjYe]cemF;;O?e13J^io3
+R1
+R2
+=1-70c94ef2b061-5b597177-30-17ec
+R3
+n@_opt2
+R4
+R5
+!s110 1532588408
+T_opt3
+V1fQAlgi59eSkB>fMO5:A80
+R1
+R2
+=1-70c94ef2b061-5b9b7d3a-232-be0
+R3
+n@_opt3
+R4
+R5
+!s110 1536916796
+T_opt4
+VCA67HiSCJWPILHXH]:YR[1
+R1
+R2
+=1-70c94ef2b061-5b9b7931-25f-3ac8
+R3
+n@_opt4
+R4
+R5
+!s110 1536915763
+T_opt5
+VHg4h?T_z^iEF23ZYAUXSa3
+R1
+R2
+=1-70c94ef2b061-5bdaee1f-195-934
+R3
+n@_opt5
+R4
+R5
+!s110 1541074464
+T_opt6
+!s110 1541081573
+Vmj[2@8c`aOgG[BdiYlcZ>1
+R1
+R2
+=1-70c94ef2b061-5bdb09e4-61-2e00
+R3
+n@_opt6
+R4
+vbit_syn
+Z6 !s110 1541081570
+I__gOQJiA<gXC9Z[Qj;hzH3
+Z7 V`JN@9S9cnhjKRR_L]QIcM3
+Z8 dD:\FSK_demode
+w1541070090
+8bit_syn.v
+Fbit_syn.v
+L0 21
+Z9 OL;L;10.2;57
+r1
+31
+Z10 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 MnRPEM=W;Y9WM:6U2IA9[3
+!s90 -reportprogress|300|bit_syn.v|
+!s108 1541081570.753000
+!s107 bit_syn.v|
+!i10b 1
+!s85 0
+vclk_div
+R6
+I7PVPM603J1CHVJHkT7jUY2
+R7
+R8
+w1541081550
+8clk_div.v
+Fclk_div.v
+L0 21
+R9
+r1
+31
+R10
+!s90 -reportprogress|300|clk_div.v|
+!s100 88n?eS@bHHm5=;Jm[FEJP1
+!s108 1541081570.660000
+!s107 clk_div.v|
+!i10b 1
+!s85 0
+vcordic
+Z11 !s110 1541081569
+Ih[IN<][6;>j7NM:;c5:@92
+R7
+R8
+w1528760032
+8ipcore_dir/cordic.v
+Fipcore_dir/cordic.v
+L0 36
+R9
+r1
+31
+R10
+!s100 EhKz0NVhDf_HBiAD<KcKW1
+!s108 1541081569.034000
+!s107 ipcore_dir/cordic.v|
+!s90 -reportprogress|300|ipcore_dir/cordic.v|
+!i10b 1
+!s85 0
+vcounter
+R6
+IOBE@gZIjGR<z5GdT?@Z0L0
+R7
+R8
+w1529218984
+8counter.v
+Fcounter.v
+L0 21
+R9
+r1
+31
+R10
+!s100 e?em7V>DZMS^15mAU=3h^1
+!s90 -reportprogress|300|counter.v|
+!s108 1541081570.566000
+!s107 counter.v|
+!i10b 1
+!s85 0
+vdivider
+R11
+I?NB3MNQlozV?9GPZ3_<Fo0
+R7
+R8
+w1528712388
+8ipcore_dir/divider.v
+Fipcore_dir/divider.v
+L0 36
+R9
+r1
+31
+R10
+!s100 dX4Y89>cMXdo;XB<`2Y?d2
+!s108 1541081569.409000
+!s107 ipcore_dir/divider.v|
+!s90 -reportprogress|300|ipcore_dir/divider.v|
+!i10b 1
+!s85 0
+vdownsample
+R6
+ICBLXCNCQEFYmbSTg4F96P3
+R7
+R8
+w1536908457
+8downsample.v
+Fdownsample.v
+L0 21
+R9
+r1
+31
+R10
+!s100 =BVf??4PYkJE;dWcHVbNl0
+!s90 -reportprogress|300|downsample.v|
+!s108 1541081570.488000
+!s107 downsample.v|
+!i10b 1
+!s85 0
+vfilter
+R6
+Inde]H@FHBc@5C5M;1SCbP2
+R7
+R8
+w1529216276
+8filter.v
+Ffilter.v
+L0 21
+R9
+r1
+31
+R10
+!s100 ?niAjQA@9cBgGeYTb@hd;3
+!s90 -reportprogress|300|filter.v|
+!s108 1541081570.394000
+!s107 filter.v|
+!i10b 1
+!s85 0
+vfilter_low
+R6
+Ih3<D0mEZ;MO]ZTU1_NFf01
+R7
+R8
+w1536914686
+8filter_low.v
+Ffilter_low.v
+L0 21
+R9
+r1
+31
+R10
+!s100 ;laMd>TaAInOR4T>F]WHL1
+!s90 -reportprogress|300|filter_low.v|
+!s108 1541081570.300000
+!s107 filter_low.v|
+!i10b 1
+!s85 0
+vGardner_1
+R6
+I2fieMX<lTZ1QBIXF^>BP=2
+R7
+R8
+w1541074962
+8Gardner_1.v
+FGardner_1.v
+L0 21
+R9
+r1
+31
+R10
+n@gardner_1
+!s100 `XmJFlC>ABGGIJTk:N[Tf3
+!s90 -reportprogress|300|Gardner_1.v|
+!s108 1541081570.206000
+!s107 Gardner_1.v|
+!i10b 1
+!s85 0
+vglbl
+R6
+INIK0BVHamQ[6A0]6oZeOK2
+R7
+R8
+w1381681120
+8E:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+FE:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+L0 5
+R9
+r1
+31
+R10
+!i10b 1
+!s100 V<`KW`8LXe32mQ2Gdj1MB2
+!s85 0
+!s108 1541081570.956000
+!s107 E:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!s90 -reportprogress|300|E:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+vmycordic
+R11
+I1H<:m8I<[SDUJ8<7CHRRO3
+R7
+R8
+w1528760166
+8ipcore_dir/mycordic.v
+Fipcore_dir/mycordic.v
+L0 36
+R9
+r1
+31
+R10
+!s100 SN0KR8P77onPO:`Wj[9Hk0
+!s108 1541081569.269000
+!s107 ipcore_dir/mycordic.v|
+!s90 -reportprogress|300|ipcore_dir/mycordic.v|
+!i10b 1
+!s85 0
+vphase_band_top
+R11
+I2=Wo?fSH`DS5ePkzoTFTE1
+R7
+R8
+w1541072911
+8phase_band_top2.v
+Fphase_band_top2.v
+L0 20
+R9
+r1
+31
+R10
+!s100 KhzckIaX[=4ZkFFFzYn[[0
+!s90 -reportprogress|300|phase_band_top2.v|
+!s108 1541081569.941000
+!s107 phase_band_top2.v|
+!i10b 1
+!s85 0
+vROM
+R6
+IUL=AFOXdYZCHMQHOl3lXW3
+R7
+R8
+w1541076394
+8ipcore_dir/ROM.v
+Fipcore_dir/ROM.v
+L0 39
+R9
+r1
+31
+R10
+n@r@o@m
+!s100 9YU3Rg0zlYWZcH7HUmOSS2
+!s90 -reportprogress|300|ipcore_dir/ROM.v|
+!s108 1541081570.128000
+!s107 ipcore_dir/ROM.v|
+!i10b 1
+!s85 0
+vROM2
+I9gzk1li;YcnHW=`aW_DkV3
+R7
+R8
+w1541072690
+8ipcore_dir/ROM2.v
+Fipcore_dir/ROM2.v
+L0 39
+R9
+r1
+31
+R10
+n@r@o@m2
+R6
+!s100 Df?DHd>V>nG4jzcZRgzbT0
+!s90 -reportprogress|300|ipcore_dir/ROM2.v|
+!s108 1541081570.034000
+!s107 ipcore_dir/ROM2.v|
+!i10b 1
+!s85 0
+vtest_jidai
+R6
+IFiP>lWl;XH4Y:KoTcBgHN3
+R7
+R8
+w1536917325
+8test_jidai.v
+Ftest_jidai.v
+L0 25
+R9
+r1
+31
+R10
+!s100 RXKe6i[L]Ro10a?K9DGJf0
+!s90 -reportprogress|300|test_jidai.v|
+!s108 1541081570.863000
+!s107 test_jidai.v|
+!i10b 1
+!s85 0
+vuart_tx
+R11
+I]`Z6;za:>Uk]XWA0S[<O]1
+R7
+R8
+w1532855576
+8uart_tx.v
+Fuart_tx.v
+L0 21
+R9
+r1
+31
+R10
+!s100 bh6zCkjAA=N8f^2o;D4Ja0
+!s90 -reportprogress|300|uart_tx.v|
+!s108 1541081569.769000
+!s107 uart_tx.v|
+!i10b 1
+!s85 0

@@ -1,0 +1,1966 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: bit_syn.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "bit_syn.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "bit_syn"
+Output Format                      : NGC
+Target Device                      : xc6vlx240t-2-ff1156
+
+---- Source Options
+Top Module Name                    : bit_syn
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\phase_band_top3\ipcore_dir\mycordic.v" into library work
+Parsing module <mycordic>.
+Analyzing Verilog file "D:\phase_band_top3\ipcore_dir\divider.v" into library work
+Parsing module <divider>.
+Analyzing Verilog file "D:\phase_band_top3\ipcore_dir\cordic.v" into library work
+Parsing module <cordic>.
+Analyzing Verilog file "D:\phase_band_top3\uart_tx.v" into library work
+Parsing module <uart_tx>.
+Analyzing Verilog file "D:\phase_band_top3\phase_band_top2.v" into library work
+Parsing module <phase_band_top>.
+Analyzing Verilog file "D:\phase_band_top3\ipcore_dir\ROM2.v" into library work
+Parsing module <ROM2>.
+Analyzing Verilog file "D:\phase_band_top3\ipcore_dir\ROM.v" into library work
+Parsing module <ROM>.
+Analyzing Verilog file "D:\phase_band_top3\Gardner_1.v" into library work
+Parsing module <Gardner_1>.
+Analyzing Verilog file "D:\phase_band_top3\filter.v" into library work
+Parsing module <filter>.
+Analyzing Verilog file "D:\phase_band_top3\downsample.v" into library work
+Parsing module <downsample>.
+Analyzing Verilog file "D:\phase_band_top3\counter.v" into library work
+Parsing module <counter>.
+Analyzing Verilog file "D:\phase_band_top3\clk_div.v" into library work
+Parsing module <clk_div>.
+Analyzing Verilog file "D:\phase_band_top3\bit_syn.v" into library work
+Parsing module <bit_syn>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "D:\phase_band_top3\bit_syn.v" Line 49: Port t1 is not connected to this instance
+
+Elaborating module <bit_syn>.
+
+Elaborating module <counter>.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\counter.v" Line 32: Result of 16-bit expression is truncated to fit in 15-bit target.
+
+Elaborating module <ROM>.
+WARNING:HDLCompiler:1499 - "D:\phase_band_top3\ipcore_dir\ROM.v" Line 39: Empty module <ROM> remains a black box.
+
+Elaborating module <ROM2>.
+WARNING:HDLCompiler:1499 - "D:\phase_band_top3\ipcore_dir\ROM2.v" Line 39: Empty module <ROM2> remains a black box.
+
+Elaborating module <phase_band_top>.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 84: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 85: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 86: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 87: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 88: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 89: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 91: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 92: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 93: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 94: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 95: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 96: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:1127 - "D:\phase_band_top3\phase_band_top2.v" Line 102: Assignment to cos1 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 79: Result of 42-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:1127 - "D:\phase_band_top3\phase_band_top2.v" Line 119: Assignment to I_pll1 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 146: Result of 32-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:1127 - "D:\phase_band_top3\phase_band_top2.v" Line 136: Assignment to I_Q_pll3 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 150: Result of 35-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 166: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:1127 - "D:\phase_band_top3\phase_band_top2.v" Line 152: Assignment to dis_out ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\phase_band_top2.v" Line 184: Result of 17-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <cordic>.
+WARNING:HDLCompiler:1127 - "D:\phase_band_top3\phase_band_top2.v" Line 192: Assignment to rdy ignored, since the identifier is never used
+
+Elaborating module <mycordic>.
+WARNING:HDLCompiler:189 - "D:\phase_band_top3\phase_band_top2.v" Line 197: Size mismatch in connection of port <x_in>. Formal port size is 41-bit while actual signal size is 42-bit.
+WARNING:HDLCompiler:1127 - "D:\phase_band_top3\phase_band_top2.v" Line 199: Assignment to rdy1 ignored, since the identifier is never used
+
+Elaborating module <divider>.
+WARNING:HDLCompiler:1127 - "D:\phase_band_top3\phase_band_top2.v" Line 208: Assignment to rfd ignored, since the identifier is never used
+
+Elaborating module <filter>.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\filter.v" Line 51: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\filter.v" Line 38: Result of 32-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <downsample>.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\downsample.v" Line 39: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\downsample.v" Line 43: Result of 19-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\downsample.v" Line 49: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\downsample.v" Line 53: Result of 19-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <Gardner_1>.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 130: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 133: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 134: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 135: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 136: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 137: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 142: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 87: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 64: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 88: Result of 18-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 89: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 90: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 99: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "D:\phase_band_top3\Gardner_1.v" Line 163: Result of 18-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <clk_div>.
+
+Elaborating module <uart_tx>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <bit_syn>.
+    Related source file is "D:\phase_band_top3\bit_syn.v".
+INFO:Xst:3210 - "D:\phase_band_top3\bit_syn.v" line 49: Output port <t1> of the instance <filter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\phase_band_top3\bit_syn.v" line 49: Output port <t2> of the instance <filter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\phase_band_top3\bit_syn.v" line 49: Output port <t3> of the instance <filter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\phase_band_top3\bit_syn.v" line 49: Output port <t4> of the instance <filter> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <bit_syn> synthesized.
+
+Synthesizing Unit <counter>.
+    Related source file is "D:\phase_band_top3\counter.v".
+    Found 15-bit register for signal <count>.
+    Found 15-bit adder for signal <count[14]_GND_2_o_add_1_OUT> created at line 32.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  15 D-type flip-flop(s).
+Unit <counter> synthesized.
+
+Synthesizing Unit <phase_band_top>.
+    Related source file is "D:\phase_band_top3\phase_band_top2.v".
+        pi = 51470
+        sqrt2 = 23170
+        C1 = 8213
+        C2 = 225
+INFO:Xst:3210 - "D:\phase_band_top3\phase_band_top2.v" line 187: Output port <rdy> of the instance <cordic> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\phase_band_top3\phase_band_top2.v" line 195: Output port <rdy> of the instance <mycordic> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\phase_band_top3\phase_band_top2.v" line 202: Output port <rfd> of the instance <divider> is unconnected or connected to loadless signal.
+    Found 21-bit register for signal <sign_I_Q>.
+    Found 21-bit register for signal <freq_part>.
+    Found 21-bit register for signal <nco_phase_buf>.
+    Found 6-bit register for signal <cnt1>.
+    Found 16-bit register for signal <freq_part1>.
+    Found 42-bit subtractor for signal <GND_5_o_unary_minus_59_OUT> created at line 79.
+    Found 42-bit subtractor for signal <GND_5_o_unary_minus_65_OUT> created at line 79.
+    Found 42-bit subtractor for signal <GND_5_o_unary_minus_72_OUT> created at line 79.
+    Found 42-bit subtractor for signal <GND_5_o_unary_minus_78_OUT> created at line 79.
+    Found 21-bit subtractor for signal <Q_pll> created at line 117.
+    Found 42-bit subtractor for signal <GND_5_o_unary_minus_90_OUT> created at line 79.
+    Found 42-bit subtractor for signal <GND_5_o_unary_minus_118_OUT> created at line 79.
+    Found 42-bit subtractor for signal <GND_5_o_unary_minus_125_OUT> created at line 79.
+    Found 22-bit adder for signal <n0191> created at line 85.
+    Found 22-bit adder for signal <n0192> created at line 86.
+    Found 22-bit adder for signal <n0193> created at line 87.
+    Found 22-bit adder for signal <n0194> created at line 88.
+    Found 22-bit adder for signal <n0195> created at line 89.
+    Found 21-bit adder for signal <I_pll> created at line 116.
+    Found 42-bit adder for signal <I_Q_pll1> created at line 133.
+    Found 6-bit adder for signal <cnt1[5]_GND_5_o_add_106_OUT> created at line 166.
+    Found 21-bit adder for signal <GND_5_o_freq_part[20]_add_119_OUT> created at line 171.
+    Found 21-bit adder for signal <n0417> created at line 172.
+    Found 21-bit adder for signal <nco_phase_buf[20]_freq_part[20]_add_127_OUT> created at line 172.
+    Found 16-bit adder for signal <freq_part[20]_GND_5_o_add_147_OUT> created at line 184.
+    Found 21-bit subtractor for signal <nco_phase_buf[20]_GND_5_o_sub_23_OUT<20:0>> created at line 91.
+    Found 21-bit subtractor for signal <nco_phase_buf[20]_GND_5_o_sub_26_OUT<20:0>> created at line 92.
+    Found 21-bit subtractor for signal <nco_phase_buf[20]_GND_5_o_sub_29_OUT<20:0>> created at line 93.
+    Found 21-bit subtractor for signal <nco_phase_buf[20]_GND_5_o_sub_32_OUT<20:0>> created at line 94.
+    Found 21-bit subtractor for signal <nco_phase_buf[20]_GND_5_o_sub_35_OUT<20:0>> created at line 95.
+    Found 21-bit subtractor for signal <nco_phase_buf[20]_GND_5_o_sub_38_OUT<20:0>> created at line 96.
+    Found 21-bit subtractor for signal <PWR_5_o_PWR_5_o_sub_102_OUT<20:0>> created at line 146.
+    Found 7-bit subtractor for signal <dis_out1[20]_GND_5_o_sub_105_OUT<6:0>> created at line 150.
+    Found 42-bit subtractor for signal <n0251> created at line 79.
+    Found 42-bit subtractor for signal <n0257> created at line 79.
+    Found 42-bit subtractor for signal <n0238> created at line 79.
+    Found 42-bit subtractor for signal <n0231> created at line 79.
+    Found 42-bit subtractor for signal <n0216> created at line 79.
+    Found 42-bit subtractor for signal <n0226> created at line 79.
+    Found 42-bit subtractor for signal <n0221> created at line 79.
+    Found 21x16-bit multiplier for signal <Ic[20]_cos[15]_MuLt_54_OUT> created at line 116.
+    Found 21x16-bit multiplier for signal <Qc[20]_sine[15]_MuLt_60_OUT> created at line 116.
+    Found 21x16-bit multiplier for signal <Qc[20]_cos[15]_MuLt_67_OUT> created at line 117.
+    Found 21x16-bit multiplier for signal <Ic[20]_sine[15]_MuLt_73_OUT> created at line 117.
+    Found 21x21-bit multiplier for signal <n0400> created at line 133.
+    Found 21x21-bit multiplier for signal <n0401> created at line 133.
+    Found 21x15-bit multiplier for signal <I_Q_pll2[20]_PWR_5_o_MuLt_85_OUT> created at line 134.
+    Found 32x21-bit multiplier for signal <n0242> created at line 146.
+    Found 32x21-bit multiplier for signal <n0245> created at line 146.
+    Found 21x9-bit multiplier for signal <dis_out3[20]_GND_5_o_MuLt_113_OUT> created at line 171.
+    Found 21x15-bit multiplier for signal <dis_out3[20]_GND_5_o_MuLt_120_OUT> created at line 172.
+    Found 32-bit comparator lessequal for signal <PWR_5_o_nco_phase_buf[20]_LessThan_2_o> created at line 84
+    Found 32-bit comparator greater for signal <PWR_5_o_nco_phase_buf[20]_LessThan_5_o> created at line 85
+    Found 32-bit comparator greater for signal <PWR_5_o_nco_phase_buf[20]_LessThan_8_o> created at line 86
+    Found 32-bit comparator greater for signal <PWR_5_o_nco_phase_buf[20]_LessThan_11_o> created at line 87
+    Found 32-bit comparator greater for signal <PWR_5_o_nco_phase_buf[20]_LessThan_14_o> created at line 88
+    Found 32-bit comparator greater for signal <PWR_5_o_nco_phase_buf[20]_LessThan_17_o> created at line 89
+    Found 32-bit comparator greater for signal <n0030> created at line 90
+    Found 32-bit comparator greater for signal <GND_5_o_nco_phase_buf[20]_LessThan_22_o> created at line 91
+    Found 32-bit comparator greater for signal <GND_5_o_nco_phase_buf[20]_LessThan_25_o> created at line 92
+    Found 32-bit comparator greater for signal <GND_5_o_nco_phase_buf[20]_LessThan_28_o> created at line 93
+    Found 32-bit comparator greater for signal <GND_5_o_nco_phase_buf[20]_LessThan_31_o> created at line 94
+    Found 32-bit comparator greater for signal <GND_5_o_nco_phase_buf[20]_LessThan_34_o> created at line 95
+    Found 32-bit comparator lessequal for signal <n0059> created at line 96
+    Found 42-bit comparator greater for signal <Ic[20]_GND_5_o_LessThan_56_o> created at line 79
+    Found 42-bit comparator greater for signal <Qc[20]_GND_5_o_LessThan_62_o> created at line 79
+    Found 42-bit comparator greater for signal <Qc[20]_GND_5_o_LessThan_69_o> created at line 79
+    Found 42-bit comparator greater for signal <Ic[20]_GND_5_o_LessThan_75_o> created at line 79
+    Found 32-bit comparator greater for signal <I_pll[20]_GND_5_o_LessThan_92_o> created at line 146
+    Found 32-bit comparator greater for signal <Q_pll[20]_GND_5_o_LessThan_97_o> created at line 146
+    Found 6-bit comparator greater for signal <cnt1[5]_PWR_5_o_LessThan_106_o> created at line 165
+    Found 42-bit comparator greater for signal <dis_out3[20]_GND_5_o_LessThan_115_o> created at line 79
+    Found 42-bit comparator greater for signal <dis_out3[20]_GND_5_o_LessThan_122_o> created at line 79
+    Summary:
+	inferred  11 Multiplier(s).
+	inferred  30 Adder/Subtractor(s).
+	inferred  85 D-type flip-flop(s).
+	inferred  22 Comparator(s).
+	inferred  35 Multiplexer(s).
+Unit <phase_band_top> synthesized.
+
+Synthesizing Unit <filter>.
+    Related source file is "D:\phase_band_top3\filter.v".
+        a1 = 16'sb0000000000110011
+        a2 = 16'sb1111111111110110
+        a3 = 16'sb1111111110110000
+        a4 = 16'sb1111111101101011
+        a5 = 16'sb1111111100110100
+        a6 = 16'sb1111111100011001
+        a7 = 16'sb1111111100100011
+        a8 = 16'sb1111111101011100
+        a9 = 16'sb1111111111000110
+        a10 = 16'sb0000000001011100
+        a11 = 16'sb0000000100010101
+        a12 = 16'sb0000000111100010
+        a13 = 16'sb0000001010110001
+        a14 = 16'sb0000001101101110
+        a15 = 16'sb0000010000000101
+        a16 = 16'sb0000010001100110
+        a17 = 16'sb0000010010001000
+        a18 = 16'sb0000010001100110
+        a19 = 16'sb0000010000000101
+        a20 = 16'sb0000001101101110
+        a21 = 16'sb0000001010110001
+        a22 = 16'sb0000000111100010
+        a23 = 16'sb0000000100010101
+        a24 = 16'sb0000000001011100
+        a25 = 16'sb1111111111000110
+        a26 = 16'sb1111111101011100
+        a27 = 16'sb1111111100100011
+        a28 = 16'sb1111111100011001
+        a29 = 16'sb1111111100110100
+        a30 = 16'sb1111111101101011
+        a31 = 16'sb1111111110110000
+        a32 = 16'sb1111111111110110
+        a33 = 16'sb0000000000110011
+WARNING:Xst:653 - Signal <t1> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <t2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <t3> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <t4> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 16-bit register for signal <d2>.
+    Found 16-bit register for signal <d3>.
+    Found 16-bit register for signal <d4>.
+    Found 16-bit register for signal <d5>.
+    Found 16-bit register for signal <d6>.
+    Found 16-bit register for signal <d7>.
+    Found 16-bit register for signal <d8>.
+    Found 16-bit register for signal <d9>.
+    Found 16-bit register for signal <d10>.
+    Found 16-bit register for signal <d11>.
+    Found 16-bit register for signal <d12>.
+    Found 16-bit register for signal <d13>.
+    Found 16-bit register for signal <d14>.
+    Found 16-bit register for signal <d15>.
+    Found 16-bit register for signal <d16>.
+    Found 16-bit register for signal <d17>.
+    Found 16-bit register for signal <d18>.
+    Found 16-bit register for signal <d19>.
+    Found 16-bit register for signal <d20>.
+    Found 16-bit register for signal <d21>.
+    Found 16-bit register for signal <d22>.
+    Found 16-bit register for signal <d23>.
+    Found 16-bit register for signal <d24>.
+    Found 16-bit register for signal <d25>.
+    Found 16-bit register for signal <d26>.
+    Found 16-bit register for signal <d27>.
+    Found 16-bit register for signal <d28>.
+    Found 16-bit register for signal <d29>.
+    Found 16-bit register for signal <d30>.
+    Found 16-bit register for signal <d31>.
+    Found 16-bit register for signal <d32>.
+    Found 16-bit register for signal <d33>.
+    Found 6-bit register for signal <cnt>.
+    Found 16-bit register for signal <y>.
+    Found 16-bit register for signal <d1>.
+    Found 32-bit subtractor for signal <GND_16_o_unary_minus_72_OUT> created at line 38.
+    Found 6-bit adder for signal <cnt[5]_GND_16_o_add_1_OUT> created at line 51.
+    Found 24-bit adder for signal <GND_16_o_PWR_18_o_add_5_OUT> created at line 57.
+    Found 25-bit adder for signal <GND_16_o_PWR_18_o_add_7_OUT> created at line 57.
+    Found 26-bit adder for signal <GND_16_o_PWR_18_o_add_9_OUT> created at line 57.
+    Found 27-bit adder for signal <GND_16_o_PWR_18_o_add_11_OUT> created at line 57.
+    Found 28-bit adder for signal <GND_16_o_PWR_18_o_add_13_OUT> created at line 57.
+    Found 29-bit adder for signal <GND_16_o_PWR_18_o_add_15_OUT> created at line 57.
+    Found 30-bit adder for signal <GND_16_o_PWR_18_o_add_17_OUT> created at line 57.
+    Found 31-bit adder for signal <GND_16_o_PWR_18_o_add_19_OUT> created at line 57.
+    Found 32-bit adder for signal <n0429> created at line 57.
+    Found 32-bit adder for signal <n0432> created at line 57.
+    Found 32-bit adder for signal <n0435> created at line 57.
+    Found 32-bit adder for signal <n0438> created at line 57.
+    Found 32-bit adder for signal <n0441> created at line 57.
+    Found 32-bit adder for signal <n0444> created at line 57.
+    Found 32-bit adder for signal <n0447> created at line 57.
+    Found 32-bit adder for signal <n0450> created at line 57.
+    Found 32-bit adder for signal <n0453> created at line 57.
+    Found 32-bit adder for signal <n0456> created at line 57.
+    Found 32-bit adder for signal <n0459> created at line 57.
+    Found 32-bit adder for signal <n0462> created at line 57.
+    Found 32-bit adder for signal <n0465> created at line 57.
+    Found 32-bit adder for signal <n0468> created at line 57.
+    Found 32-bit adder for signal <n0471> created at line 57.
+    Found 32-bit adder for signal <n0474> created at line 57.
+    Found 32-bit adder for signal <n0477> created at line 57.
+    Found 32-bit adder for signal <n0480> created at line 57.
+    Found 32-bit adder for signal <n0483> created at line 57.
+    Found 32-bit adder for signal <n0486> created at line 57.
+    Found 32-bit adder for signal <n0489> created at line 57.
+    Found 32-bit adder for signal <n0492> created at line 57.
+    Found 32-bit adder for signal <n0495> created at line 57.
+    Found 32-bit adder for signal <GND_16_o_GND_16_o_add_67_OUT> created at line 57.
+    Found 32-bit subtractor for signal <n0282> created at line 38.
+    Found 7x16-bit multiplier for signal <GND_16_o_d33[15]_MuLt_3_OUT> created at line 57.
+    Found 5x16-bit multiplier for signal <PWR_18_o_d32[15]_MuLt_4_OUT> created at line 57.
+    Found 8x16-bit multiplier for signal <PWR_18_o_d31[15]_MuLt_6_OUT> created at line 57.
+    Found 9x16-bit multiplier for signal <PWR_18_o_d30[15]_MuLt_8_OUT> created at line 57.
+    Found 9x16-bit multiplier for signal <PWR_18_o_d29[15]_MuLt_10_OUT> created at line 57.
+    Found 9x16-bit multiplier for signal <PWR_18_o_d28[15]_MuLt_12_OUT> created at line 57.
+    Found 9x16-bit multiplier for signal <PWR_18_o_d27[15]_MuLt_14_OUT> created at line 57.
+    Found 9x16-bit multiplier for signal <PWR_18_o_d26[15]_MuLt_16_OUT> created at line 57.
+    Found 7x16-bit multiplier for signal <PWR_18_o_d25[15]_MuLt_18_OUT> created at line 57.
+    Found 8x16-bit multiplier for signal <GND_16_o_d24[15]_MuLt_20_OUT> created at line 57.
+    Found 10x16-bit multiplier for signal <GND_16_o_d23[15]_MuLt_22_OUT> created at line 57.
+    Found 10x16-bit multiplier for signal <GND_16_o_d22[15]_MuLt_24_OUT> created at line 57.
+    Found 11x16-bit multiplier for signal <GND_16_o_d21[15]_MuLt_26_OUT> created at line 58.
+    Found 11x16-bit multiplier for signal <GND_16_o_d20[15]_MuLt_28_OUT> created at line 58.
+    Found 12x16-bit multiplier for signal <GND_16_o_d19[15]_MuLt_30_OUT> created at line 58.
+    Found 12x16-bit multiplier for signal <GND_16_o_d18[15]_MuLt_32_OUT> created at line 58.
+    Found 12x16-bit multiplier for signal <GND_16_o_d17[15]_MuLt_34_OUT> created at line 58.
+    Found 12x16-bit multiplier for signal <GND_16_o_d16[15]_MuLt_36_OUT> created at line 58.
+    Found 12x16-bit multiplier for signal <GND_16_o_d15[15]_MuLt_38_OUT> created at line 58.
+    Found 11x16-bit multiplier for signal <GND_16_o_d14[15]_MuLt_40_OUT> created at line 58.
+    Found 11x16-bit multiplier for signal <GND_16_o_d13[15]_MuLt_42_OUT> created at line 58.
+    Found 10x16-bit multiplier for signal <GND_16_o_d12[15]_MuLt_44_OUT> created at line 58.
+    Found 10x16-bit multiplier for signal <GND_16_o_d11[15]_MuLt_46_OUT> created at line 58.
+    Found 8x16-bit multiplier for signal <GND_16_o_d10[15]_MuLt_48_OUT> created at line 59.
+    Found 7x16-bit multiplier for signal <PWR_18_o_d9[15]_MuLt_50_OUT> created at line 59.
+    Found 9x16-bit multiplier for signal <PWR_18_o_d8[15]_MuLt_52_OUT> created at line 59.
+    Found 9x16-bit multiplier for signal <PWR_18_o_d7[15]_MuLt_54_OUT> created at line 59.
+    Found 9x16-bit multiplier for signal <PWR_18_o_d6[15]_MuLt_56_OUT> created at line 59.
+    Found 9x16-bit multiplier for signal <PWR_18_o_d5[15]_MuLt_58_OUT> created at line 59.
+    Found 9x16-bit multiplier for signal <PWR_18_o_d4[15]_MuLt_60_OUT> created at line 59.
+    Found 8x16-bit multiplier for signal <PWR_18_o_d3[15]_MuLt_62_OUT> created at line 59.
+    Found 5x16-bit multiplier for signal <PWR_18_o_d2[15]_MuLt_64_OUT> created at line 59.
+    Found 7x16-bit multiplier for signal <GND_16_o_d1[15]_MuLt_66_OUT> created at line 59.
+    Found 6-bit comparator greater for signal <GND_16_o_cnt[5]_LessThan_3_o> created at line 52
+    Found 32-bit comparator lessequal for signal <n0068> created at line 38
+    Summary:
+	inferred  33 Multiplier(s).
+	inferred  35 Adder/Subtractor(s).
+	inferred 550 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <filter> synthesized.
+
+Synthesizing Unit <downsample>.
+    Related source file is "D:\phase_band_top3\downsample.v".
+        sample_num1 = 4
+        sample_num2 = 31
+WARNING:Xst:647 - Input <x<15:13>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <y>.
+    Found 1-bit register for signal <start_flag>.
+    Found 6-bit register for signal <cnt>.
+    Found 6-bit adder for signal <cnt[5]_GND_25_o_add_6_OUT> created at line 49.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+Unit <downsample> synthesized.
+
+Synthesizing Unit <Gardner_1>.
+    Related source file is "D:\phase_band_top3\Gardner_1.v".
+        dPlGain = 64
+        tedGain = 1024
+    Found 1-bit register for signal <flag>.
+    Found 3-bit register for signal <cnt_data>.
+    Found 16-bit register for signal <pos>.
+    Found 16-bit register for signal <tedm>.
+    Found 16-bit register for signal <tedp>.
+    Found 4-bit register for signal <led_cnt>.
+    Found 6-bit register for signal <cnt_pos>.
+    Found 1-bit register for signal <data_flag>.
+    Found 1-bit register for signal <pos_flag>.
+    Found 8-bit register for signal <led>.
+    Found 16-bit register for signal <d_1>.
+    Found 16-bit register for signal <d0>.
+    Found 16-bit register for signal <d1>.
+    Found 16-bit register for signal <d2>.
+    Found 16-bit register for signal <iData>.
+    Found 8-bit register for signal <data_out>.
+    Found 8-bit register for signal <led_1>.
+    Found 8-bit register for signal <led_2>.
+    Found 9-bit subtractor for signal <GND_26_o_GND_26_o_sub_32_OUT> created at line 87.
+    Found 32-bit subtractor for signal <GND_26_o_unary_minus_33_OUT> created at line 88.
+    Found 32-bit subtractor for signal <GND_26_o_unary_minus_37_OUT> created at line 64.
+    Found 11-bit subtractor for signal <GND_26_o_GND_26_o_sub_41_OUT> created at line 89.
+    Found 32-bit subtractor for signal <n0394> created at line 89.
+    Found 32-bit subtractor for signal <GND_26_o_unary_minus_45_OUT> created at line 90.
+    Found 32-bit subtractor for signal <GND_26_o_unary_minus_49_OUT> created at line 64.
+    Found 32-bit subtractor for signal <GND_26_o_unary_minus_58_OUT> created at line 64.
+    Found 32-bit subtractor for signal <GND_26_o_unary_minus_64_OUT> created at line 64.
+    Found 32-bit subtractor for signal <GND_26_o_unary_minus_71_OUT> created at line 64.
+    Found 32-bit subtractor for signal <GND_26_o_unary_minus_78_OUT> created at line 64.
+    Found 32-bit subtractor for signal <PWR_28_o_PWR_28_o_sub_107_OUT> created at line 163.
+    Found 32-bit subtractor for signal <GND_26_o_unary_minus_112_OUT> created at line 64.
+    Found 32-bit subtractor for signal <GND_26_o_unary_minus_117_OUT> created at line 64.
+    Found 3-bit adder for signal <cnt_data[2]_GND_26_o_add_3_OUT> created at line 130.
+    Found 6-bit adder for signal <cnt_pos[5]_GND_26_o_add_5_OUT> created at line 133.
+    Found 17-bit adder for signal <n0391> created at line 88.
+    Found 17-bit adder for signal <n0210> created at line 88.
+    Found 32-bit adder for signal <n0213> created at line 89.
+    Found 17-bit adder for signal <n0400> created at line 90.
+    Found 16-bit adder for signal <n0410> created at line 91.
+    Found 16-bit adder for signal <n0415> created at line 91.
+    Found 16-bit adder for signal <GND_26_o_GND_26_o_add_79_OUT> created at line 91.
+    Found 13-bit adder for signal <n0419[12:0]> created at line 163.
+    Found 17-bit adder for signal <n0261> created at line 163.
+    Found 4-bit adder for signal <led_cnt[3]_GND_26_o_add_186_OUT> created at line 99.
+    Found 16-bit subtractor for signal <GND_26_o_GND_26_o_sub_53_OUT<15:0>> created at line 90.
+    Found 32-bit subtractor for signal <n0236> created at line 64.
+    Found 32-bit subtractor for signal <n0225> created at line 64.
+    Found 32-bit subtractor for signal <n0242> created at line 64.
+    Found 32-bit subtractor for signal <n0230> created at line 64.
+    Found 32-bit subtractor for signal <n0254> created at line 64.
+    Found 32-bit subtractor for signal <n0258> created at line 64.
+    Found 32-bit adder for signal <n0206> created at line 64.
+    Found 32-bit adder for signal <n0217> created at line 64.
+    Found 10x10-bit multiplier for signal <n0199> created at line 83.
+    Found 10x10-bit multiplier for signal <n0200> created at line 85.
+    Found 8x10-bit multiplier for signal <n0201> created at line 87.
+    Found 8x10-bit multiplier for signal <n0202> created at line 87.
+    Found 9x11-bit multiplier for signal <GND_26_o_GND_26_o_MuLt_43_OUT> created at line 90.
+    Found 9x10-bit multiplier for signal <n0221> created at line 90.
+    Found 9x16-bit multiplier for signal <GND_26_o_d2[15]_MuLt_53_OUT> created at line 91.
+    Found 16x16-bit multiplier for signal <BUS_0109_d1[15]_MuLt_59_OUT> created at line 91.
+    Found 16x16-bit multiplier for signal <GND_26_o_d0[15]_MuLt_66_OUT> created at line 91.
+    Found 16x16-bit multiplier for signal <GND_26_o_d_1[15]_MuLt_73_OUT> created at line 91.
+    Found 32x16-bit multiplier for signal <n0252> created at line 163.
+    Found 6-bit comparator equal for signal <cnt_pos[5]_pos[15]_equal_27_o> created at line 154
+    Found 32-bit comparator lessequal for signal <n0028> created at line 64
+    Found 32-bit comparator lessequal for signal <n0041> created at line 64
+    Found 32-bit comparator lessequal for signal <n0051> created at line 64
+    Found 32-bit comparator lessequal for signal <n0058> created at line 64
+    Found 32-bit comparator lessequal for signal <n0066> created at line 64
+    Found 32-bit comparator lessequal for signal <n0074> created at line 64
+    Found 32-bit comparator greater for signal <tedp[15]_GND_26_o_LessThan_99_o> created at line 163
+    Found 32-bit comparator lessequal for signal <n0091> created at line 64
+    Found 32-bit comparator lessequal for signal <n0097> created at line 64
+    Found 32-bit comparator greater for signal <GND_26_o_GND_26_o_LessThan_181_o> created at line 94
+    Found 32-bit comparator greater for signal <GND_26_o_GND_26_o_LessThan_182_o> created at line 95
+    Found 32-bit comparator greater for signal <GND_26_o_PWR_28_o_LessThan_183_o> created at line 96
+    Found 4-bit comparator greater for signal <PWR_28_o_led_cnt[3]_LessThan_188_o> created at line 100
+    Summary:
+	inferred  11 Multiplier(s).
+	inferred  35 Adder/Subtractor(s).
+	inferred 176 D-type flip-flop(s).
+	inferred  14 Comparator(s).
+	inferred  16 Multiplexer(s).
+Unit <Gardner_1> synthesized.
+
+Synthesizing Unit <clk_div>.
+    Related source file is "D:\phase_band_top3\clk_div.v".
+    Found 8-bit register for signal <cnt1>.
+    Found 1-bit register for signal <clk_4_1>.
+    Found 13-bit register for signal <cnt2>.
+    Found 1-bit register for signal <clk_ip_1>.
+    Found 3-bit register for signal <cnt3>.
+    Found 1-bit register for signal <clk_128_1>.
+    Found 8-bit adder for signal <cnt1[7]_GND_34_o_add_2_OUT> created at line 57.
+    Found 13-bit adder for signal <cnt2[12]_GND_34_o_add_7_OUT> created at line 68.
+    Found 3-bit adder for signal <cnt3[2]_GND_34_o_add_12_OUT> created at line 79.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+Unit <clk_div> synthesized.
+
+Synthesizing Unit <uart_tx>.
+    Related source file is "D:\phase_band_top3\uart_tx.v".
+        S_IDLE = 4'b0000
+        S_START = 4'b0001
+        S_BIT0 = 4'b0010
+        S_BIT1 = 4'b0011
+        S_BIT2 = 4'b0100
+        S_BIT3 = 4'b0101
+        S_BIT4 = 4'b0110
+        S_BIT5 = 4'b0111
+        S_BIT6 = 4'b1000
+        S_BIT7 = 4'b1001
+        S_STOP = 4'b1010
+    Found 1-bit register for signal <txd>.
+    Found 16-bit register for signal <bit_timer>.
+    Found 4-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 22                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit adder for signal <bit_timer[15]_GND_35_o_add_38_OUT> created at line 219.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred  14 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <uart_tx> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 55
+ 10x10-bit multiplier                                  : 2
+ 10x8-bit multiplier                                   : 2
+ 10x9-bit multiplier                                   : 1
+ 11x9-bit multiplier                                   : 1
+ 16x10-bit multiplier                                  : 4
+ 16x11-bit multiplier                                  : 4
+ 16x12-bit multiplier                                  : 5
+ 16x16-bit multiplier                                  : 3
+ 16x5-bit multiplier                                   : 2
+ 16x7-bit multiplier                                   : 4
+ 16x8-bit multiplier                                   : 4
+ 16x9-bit multiplier                                   : 11
+ 21x15-bit multiplier                                  : 2
+ 21x16-bit multiplier                                  : 4
+ 21x21-bit multiplier                                  : 2
+ 21x9-bit multiplier                                   : 1
+ 32x16-bit multiplier                                  : 1
+ 32x21-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 106
+ 11-bit subtractor                                     : 1
+ 13-bit adder                                          : 2
+ 15-bit adder                                          : 1
+ 16-bit adder                                          : 5
+ 16-bit subtractor                                     : 1
+ 17-bit adder                                          : 4
+ 21-bit adder                                          : 4
+ 21-bit subtractor                                     : 3
+ 22-bit adder                                          : 5
+ 24-bit adder                                          : 1
+ 25-bit adder                                          : 1
+ 26-bit adder                                          : 1
+ 27-bit adder                                          : 1
+ 28-bit adder                                          : 1
+ 29-bit adder                                          : 1
+ 3-bit adder                                           : 2
+ 30-bit adder                                          : 1
+ 31-bit adder                                          : 1
+ 32-bit adder                                          : 27
+ 32-bit subtractor                                     : 20
+ 4-bit adder                                           : 1
+ 42-bit adder                                          : 1
+ 42-bit subtractor                                     : 14
+ 6-bit adder                                           : 4
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 70
+ 1-bit register                                        : 8
+ 13-bit register                                       : 1
+ 15-bit register                                       : 1
+ 16-bit register                                       : 45
+ 21-bit register                                       : 3
+ 3-bit register                                        : 2
+ 4-bit register                                        : 1
+ 6-bit register                                        : 4
+ 8-bit register                                        : 5
+# Comparators                                          : 38
+ 32-bit comparator greater                             : 17
+ 32-bit comparator lessequal                           : 11
+ 4-bit comparator greater                              : 1
+ 42-bit comparator greater                             : 6
+ 6-bit comparator equal                                : 1
+ 6-bit comparator greater                              : 2
+# Multiplexers                                         : 66
+ 1-bit 2-to-1 multiplexer                              : 16
+ 16-bit 2-to-1 multiplexer                             : 6
+ 21-bit 2-to-1 multiplexer                             : 18
+ 32-bit 2-to-1 multiplexer                             : 13
+ 4-bit 2-to-1 multiplexer                              : 1
+ 42-bit 2-to-1 multiplexer                             : 7
+ 6-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/ROM.ngc>.
+Reading core <ipcore_dir/ROM2.ngc>.
+Reading core <ipcore_dir/cordic.ngc>.
+Reading Secure Unit <blk00000015>.
+Reading core <ipcore_dir/mycordic.ngc>.
+Reading Secure Unit <blk0000002e>.
+Reading core <ipcore_dir/divider.ngc>.
+Loading core <ROM> for timing and area information for instance <ROM>.
+Loading core <ROM2> for timing and area information for instance <ROM2>.
+Loading core <cordic> for timing and area information for instance <cordic>.
+Loading core <mycordic> for timing and area information for instance <mycordic>.
+Loading core <divider> for timing and area information for instance <divider>.
+INFO:Xst:2261 - The FF/Latch <y_0> in Unit <downsample> is equivalent to the following 2 FFs/Latches, which will be removed : <y_1> <y_2> 
+WARNING:Xst:1710 - FF/Latch <y_0> (without init value) has a constant value of 0 in block <downsample>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <d2_0> (without init value) has a constant value of 0 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <d2_1> (without init value) has a constant value of 0 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <d2_2> (without init value) has a constant value of 0 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <y_13> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <y_14> of sequential type is unconnected in block <filter>.
+WARNING:Xst:2677 - Node <y_15> of sequential type is unconnected in block <filter>.
+WARNING:Xst:1710 - FF/Latch <d1_0> (without init value) has a constant value of 0 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <d1_1> (without init value) has a constant value of 0 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <d1_2> (without init value) has a constant value of 0 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <d0_0> (without init value) has a constant value of 0 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <d0_1> (without init value) has a constant value of 0 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <d0_2> (without init value) has a constant value of 0 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <d_1_0> (without init value) has a constant value of 0 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <d_1_1> (without init value) has a constant value of 0 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <d_1_2> (without init value) has a constant value of 0 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <Gardner_1>.
+The following registers are absorbed into counter <cnt_data>: 1 register on signal <cnt_data>.
+The following registers are absorbed into counter <led_cnt>: 1 register on signal <led_cnt>.
+	The following adders/subtractors are grouped into adder tree <Madd_GND_26_o_GND_26_o_add_79_OUT1> :
+ 	<Madd_n0410> in block <Gardner_1>, 	<Madd_n0415> in block <Gardner_1>, 	<Madd_GND_26_o_GND_26_o_add_79_OUT> in block <Gardner_1>.
+Unit <Gardner_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clk_div>.
+The following registers are absorbed into counter <cnt1>: 1 register on signal <cnt1>.
+The following registers are absorbed into counter <cnt2>: 1 register on signal <cnt2>.
+The following registers are absorbed into counter <cnt3>: 1 register on signal <cnt3>.
+Unit <clk_div> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <downsample>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <downsample> synthesized (advanced).
+
+Synthesizing (advanced) Unit <filter>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+	The following adders/subtractors are grouped into adder tree <Madd_GND_16_o_GND_16_o_add_67_OUT1> :
+ 	<Madd_GND_16_o_PWR_18_o_add_5_OUT> in block <filter>, 	<Madd_GND_16_o_PWR_18_o_add_7_OUT> in block <filter>, 	<Madd_GND_16_o_PWR_18_o_add_9_OUT> in block <filter>, 	<Madd_GND_16_o_PWR_18_o_add_11_OUT> in block <filter>, 	<Madd_GND_16_o_PWR_18_o_add_13_OUT> in block <filter>, 	<Madd_GND_16_o_PWR_18_o_add_15_OUT> in block <filter>, 	<Madd_GND_16_o_PWR_18_o_add_17_OUT> in block <filter>, 	<Madd_GND_16_o_PWR_18_o_add_19_OUT> in block <filter>, 	<Madd_n0429> in block <filter>, 	<Madd_n0432> in block <filter>, 	<Madd_n0435> in block <filter>, 	<Madd_n0438> in block <filter>, 	<Madd_n0441> in block <filter>, 	<Madd_n0444> in block <filter>, 	<Madd_n0447> in block <filter>, 	<Madd_n0450> in block <filter>, 	<Madd_n0453> in block <filter>, 	<Madd_n0456> in block <filter>, 	<Madd_n0459> in block <filter>, 	<Madd_n0462> in block <filter>, 	<Madd_n0465> in block <filter>, 	<Madd_n0468> in block <filter>, 	<Madd_n0471> in block <filter>, 	<Madd_n0474> in block <filter>, 	<Madd_n0477> in block <filter>, 	<Madd_n0480> in
+block <filter>, 	<Madd_n0483> in block <filter>, 	<Madd_n0486> in block <filter>, 	<Madd_n0489> in block <filter>, 	<Madd_n0492> in block <filter>, 	<Madd_n0495> in block <filter>, 	<Madd_GND_16_o_GND_16_o_add_67_OUT> in block <filter>.
+	Multiplier <Mmult_GND_16_o_d1[15]_MuLt_66_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd29> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d1[15]_MuLt_66_OUT>.
+	Multiplier <Mmult_PWR_18_o_d2[15]_MuLt_64_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd28> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d2[15]_MuLt_64_OUT>.
+	Multiplier <Mmult_PWR_18_o_d3[15]_MuLt_62_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd27> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d3[15]_MuLt_62_OUT>.
+	Multiplier <Mmult_PWR_18_o_d4[15]_MuLt_60_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd26> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d4[15]_MuLt_60_OUT>.
+	Multiplier <Mmult_PWR_18_o_d5[15]_MuLt_58_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd25> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d5[15]_MuLt_58_OUT>.
+	Multiplier <Mmult_PWR_18_o_d6[15]_MuLt_56_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd24> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d6[15]_MuLt_56_OUT>.
+	Multiplier <Mmult_PWR_18_o_d7[15]_MuLt_54_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd23> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d7[15]_MuLt_54_OUT>.
+	Multiplier <Mmult_PWR_18_o_d8[15]_MuLt_52_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd22> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d8[15]_MuLt_52_OUT>.
+	Multiplier <Mmult_PWR_18_o_d9[15]_MuLt_50_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd21> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d9[15]_MuLt_50_OUT>.
+	Multiplier <Mmult_GND_16_o_d10[15]_MuLt_48_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd20> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d10[15]_MuLt_48_OUT>.
+	Multiplier <Mmult_GND_16_o_d11[15]_MuLt_46_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd19> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d11[15]_MuLt_46_OUT>.
+	Multiplier <Mmult_GND_16_o_d12[15]_MuLt_44_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd18> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d12[15]_MuLt_44_OUT>.
+	Multiplier <Mmult_GND_16_o_d13[15]_MuLt_42_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd17> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d13[15]_MuLt_42_OUT>.
+	Multiplier <Mmult_GND_16_o_d14[15]_MuLt_40_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd16> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d14[15]_MuLt_40_OUT>.
+	Multiplier <Mmult_GND_16_o_d15[15]_MuLt_38_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd15> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d15[15]_MuLt_38_OUT>.
+	Multiplier <Mmult_GND_16_o_d16[15]_MuLt_36_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd14> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d16[15]_MuLt_36_OUT>.
+	Multiplier <Mmult_GND_16_o_d17[15]_MuLt_34_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd13> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d17[15]_MuLt_34_OUT>.
+	Multiplier <Mmult_GND_16_o_d18[15]_MuLt_32_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd12> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d18[15]_MuLt_32_OUT>.
+	Multiplier <Mmult_GND_16_o_d19[15]_MuLt_30_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd11> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d19[15]_MuLt_30_OUT>.
+	Multiplier <Mmult_GND_16_o_d20[15]_MuLt_28_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd10> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d20[15]_MuLt_28_OUT>.
+	Multiplier <Mmult_GND_16_o_d21[15]_MuLt_26_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd9> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d21[15]_MuLt_26_OUT>.
+	Multiplier <Mmult_GND_16_o_d22[15]_MuLt_24_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd8> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d22[15]_MuLt_24_OUT>.
+	Multiplier <Mmult_GND_16_o_d23[15]_MuLt_22_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd7> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d23[15]_MuLt_22_OUT>.
+	Multiplier <Mmult_GND_16_o_d24[15]_MuLt_20_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd6> in block <filter> are combined into a MAC<Maddsub_GND_16_o_d24[15]_MuLt_20_OUT>.
+	Multiplier <Mmult_PWR_18_o_d25[15]_MuLt_18_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd5> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d25[15]_MuLt_18_OUT>.
+	Multiplier <Mmult_PWR_18_o_d26[15]_MuLt_16_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd4> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d26[15]_MuLt_16_OUT>.
+	Multiplier <Mmult_PWR_18_o_d27[15]_MuLt_14_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd3> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d27[15]_MuLt_14_OUT>.
+	Multiplier <Mmult_PWR_18_o_d28[15]_MuLt_12_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd2> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d28[15]_MuLt_12_OUT>.
+	Multiplier <Mmult_PWR_18_o_d29[15]_MuLt_10_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd1> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d29[15]_MuLt_10_OUT>.
+	Multiplier <Mmult_PWR_18_o_d32[15]_MuLt_4_OUT> in block <filter> and adder/subtractor <ADDER_FOR_MULTADD_Madd> in block <filter> are combined into a MAC<Maddsub_PWR_18_o_d32[15]_MuLt_4_OUT>.
+Unit <filter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <phase_band_top>.
+The following registers are absorbed into accumulator <freq_part>: 1 register on signal <freq_part>.
+The following registers are absorbed into counter <cnt1>: 1 register on signal <cnt1>.
+Unit <phase_band_top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 30
+ 16x10-to-32-bit MAC                                   : 4
+ 16x11-to-32-bit MAC                                   : 4
+ 16x12-to-32-bit MAC                                   : 5
+ 16x5-to-32-bit MAC                                    : 2
+ 16x7-to-32-bit MAC                                    : 3
+ 16x8-to-32-bit MAC                                    : 3
+ 16x9-to-32-bit MAC                                    : 9
+# Multipliers                                          : 25
+ 10x10-bit multiplier                                  : 2
+ 10x8-bit multiplier                                   : 2
+ 10x9-bit multiplier                                   : 1
+ 11x9-bit multiplier                                   : 1
+ 16x16-bit multiplier                                  : 3
+ 16x7-bit multiplier                                   : 1
+ 16x8-bit multiplier                                   : 1
+ 16x9-bit multiplier                                   : 2
+ 21x15-bit multiplier                                  : 2
+ 21x16-bit multiplier                                  : 4
+ 21x21-bit multiplier                                  : 2
+ 21x9-bit multiplier                                   : 1
+ 32x16-bit multiplier                                  : 1
+ 32x21-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 61
+ 11-bit subtractor                                     : 1
+ 13-bit adder                                          : 1
+ 16-bit adder                                          : 7
+ 16-bit subtractor                                     : 2
+ 21-bit adder                                          : 8
+ 21-bit subtractor                                     : 3
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 19
+ 41-bit adder                                          : 1
+ 42-bit subtractor                                     : 14
+ 6-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+ 9-bit subtractor                                      : 1
+# Adder Trees                                          : 2
+ 16-bit / 4-inputs adder tree                          : 1
+ 32-bit / 3-inputs adder tree                          : 1
+# Counters                                             : 9
+ 13-bit up counter                                     : 1
+ 15-bit up counter                                     : 1
+ 3-bit up counter                                      : 2
+ 4-bit up counter                                      : 1
+ 6-bit up counter                                      : 3
+ 8-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 21-bit up accumulator                                 : 1
+# Registers                                            : 808
+ Flip-Flops                                            : 808
+# Comparators                                          : 38
+ 32-bit comparator greater                             : 17
+ 32-bit comparator lessequal                           : 11
+ 4-bit comparator greater                              : 1
+ 42-bit comparator greater                             : 6
+ 6-bit comparator equal                                : 1
+ 6-bit comparator greater                              : 2
+# Multiplexers                                         : 64
+ 1-bit 2-to-1 multiplexer                              : 16
+ 16-bit 2-to-1 multiplexer                             : 6
+ 21-bit 2-to-1 multiplexer                             : 18
+ 32-bit 2-to-1 multiplexer                             : 13
+ 42-bit 2-to-1 multiplexer                             : 7
+ 6-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <y_0> (without init value) has a constant value of 0 in block <downsample>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_1> (without init value) has a constant value of 0 in block <downsample>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <y_2> (without init value) has a constant value of 0 in block <downsample>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <uart_tx/FSM_0> on signal <state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+-------------------
+WARNING:Xst:1710 - FF/Latch <led_1_0> (without init value) has a constant value of 1 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_0> (without init value) has a constant value of 1 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <led_2_0> (without init value) has a constant value of 1 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pos_0> (without init value) has a constant value of 0 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <led_0> (without init value) has a constant value of 1 in block <Gardner_1>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <led_2_2> in Unit <Gardner_1> is equivalent to the following 5 FFs/Latches, which will be removed : <led_2_3> <led_2_4> <led_2_5> <led_2_6> <led_2_7> 
+INFO:Xst:2261 - The FF/Latch <data_out_2> in Unit <Gardner_1> is equivalent to the following 5 FFs/Latches, which will be removed : <data_out_3> <data_out_4> <data_out_5> <data_out_6> <data_out_7> 
+INFO:Xst:2261 - The FF/Latch <led_1_2> in Unit <Gardner_1> is equivalent to the following 5 FFs/Latches, which will be removed : <led_1_3> <led_1_4> <led_1_5> <led_1_6> <led_1_7> 
+
+Optimizing unit <bit_syn> ...
+
+Optimizing unit <clk_div> ...
+
+Optimizing unit <uart_tx> ...
+
+Optimizing unit <phase_band_top> ...
+
+Optimizing unit <filter> ...
+
+Optimizing unit <downsample> ...
+
+Optimizing unit <Gardner_1> ...
+INFO:Xst:2261 - The FF/Latch <led_2> in Unit <Gardner_1> is equivalent to the following 5 FFs/Latches, which will be removed : <led_3> <led_4> <led_5> <led_6> <led_7> 
+WARNING:Xst:1710 - FF/Latch <Gardner_1/d2_2> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Gardner_1/d2_1> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Gardner_1/d2_0> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <filter/y_15> of sequential type is unconnected in block <bit_syn>.
+WARNING:Xst:2677 - Node <filter/y_14> of sequential type is unconnected in block <bit_syn>.
+WARNING:Xst:2677 - Node <filter/y_13> of sequential type is unconnected in block <bit_syn>.
+WARNING:Xst:1710 - FF/Latch <Gardner_1/d1_2> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Gardner_1/d1_1> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Gardner_1/d1_0> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Gardner_1/d0_2> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Gardner_1/d0_1> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Gardner_1/d0_0> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Gardner_1/d_1_2> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Gardner_1/d_1_1> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Gardner_1/d_1_0> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <filter/cnt_4> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <filter/cnt_3> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <filter/cnt_5> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <filter/cnt_2> (without init value) has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <clk_div/cnt3_2> has a constant value of 0 in block <bit_syn>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <clk_div/cnt2_0> in Unit <bit_syn> is equivalent to the following FF/Latch, which will be removed : <clk_div/cnt3_0> 
+INFO:Xst:2261 - The FF/Latch <clk_div/cnt2_1> in Unit <bit_syn> is equivalent to the following FF/Latch, which will be removed : <clk_div/cnt3_1> 
+INFO:Xst:2261 - The FF/Latch <clk_div/cnt2_2> in Unit <bit_syn> is equivalent to the following FF/Latch, which will be removed : <clk_div/clk_ip_1> 
+INFO:Xst:3203 - The FF/Latch <Gardner_1/flag> in Unit <bit_syn> is the opposite to the following FF/Latch, which will be removed : <Gardner_1/pos_flag> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block bit_syn, actual ratio is 2.
+INFO:Xst:2260 - The FF/Latch <blk00000004> in Unit <phase_band_top/cordic> is equivalent to the following 3 FFs/Latches : <blk00000cf5> <blk00000cf6> <blk00000cf7> 
+INFO:Xst:2260 - The FF/Latch <blk00000004> in Unit <phase_band_top/cordic> is equivalent to the following 3 FFs/Latches : <blk00000cf5> <blk00000cf6> <blk00000cf7> 
+FlipFlop phase_band_top/freq_part1_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop phase_band_top/freq_part1_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 381
+ Flip-Flops                                            : 381
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : bit_syn.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 11421
+#      GND                         : 28
+#      INV                         : 846
+#      LUT1                        : 175
+#      LUT2                        : 963
+#      LUT3                        : 1783
+#      LUT4                        : 146
+#      LUT5                        : 348
+#      LUT6                        : 374
+#      MUXCY                       : 3370
+#      MUXF7                       : 1
+#      VCC                         : 28
+#      XORCY                       : 3359
+# FlipFlops/Latches                : 3047
+#      FD                          : 2562
+#      FDC                         : 69
+#      FDCE                        : 108
+#      FDE                         : 187
+#      FDP                         : 1
+#      FDPE                        : 6
+#      FDR                         : 64
+#      FDRE                        : 50
+# RAMS                             : 28
+#      RAMB18E1                    : 10
+#      RAMB36E1                    : 18
+# Shift Registers                  : 46
+#      SRLC16E                     : 42
+#      SRLC32E                     : 4
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 109
+#      IBUF                        : 3
+#      OBUF                        : 106
+# DSPs                             : 56
+#      DSP48E1                     : 56
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx240tff1156-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            3031  out of  301440     1%  
+ Number of Slice LUTs:                 4681  out of  150720     3%  
+    Number used as Logic:              4635  out of  150720     3%  
+    Number used as Memory:               46  out of  58400     0%  
+       Number used as SRL:               46
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   6613
+   Number with an unused Flip Flop:    3582  out of   6613    54%  
+   Number with an unused LUT:          1932  out of   6613    29%  
+   Number of fully used LUT-FF pairs:  1099  out of   6613    16%  
+   Number of unique control sets:        32
+
+IO Utilization: 
+ Number of IOs:                         110
+ Number of bonded IOBs:                 110  out of    600    18%  
+    IOB Flip Flops/Latches:              16
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               23  out of    416     5%  
+    Number using Block RAM only:         23
+ Number of BUFG/BUFGCTRLs:                4  out of     32    12%  
+ Number of DSP48E1s:                     56  out of    768     7%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_div/clk_128_1                  | BUFG                   | 199   |
+clk                                | BUFGP                  | 44    |
+clk_div/cnt2_2                     | BUFG                   | 2773  |
+clk_div/clk_4_1                    | BUFG                   | 142   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                                                                                                           | Load  |
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------+
+ROM/N1(ROM/XST_GND:G)              | NONE(ROM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 38    |
+ROM2/N1(ROM2/XST_GND:G)            | NONE(ROM2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 38    |
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 49.977ns (Maximum Frequency: 20.009MHz)
+   Minimum input arrival time before clock: 1.915ns
+   Maximum output required time after clock: 2.765ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_div/clk_128_1'
+  Clock period: 49.977ns (frequency: 20.009MHz)
+  Total number of paths / destination ports: 5472034475116093900000000000000000000000000000000000000 / 1554
+-------------------------------------------------------------------------
+Delay:               49.977ns (Levels of Logic = 58)
+  Source:            filter/Mmult_GND_16_o_d33[15]_MuLt_3_OUT (DSP)
+  Destination:       filter/y_12 (FF)
+  Source Clock:      clk_div/clk_128_1 rising
+  Destination Clock: clk_div/clk_128_1 rising
+
+  Data Path: filter/Mmult_GND_16_o_d33[15]_MuLt_3_OUT to filter/y_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48E1:CLK->PCOUT47    1   3.344   0.000  filter/Mmult_GND_16_o_d33[15]_MuLt_3_OUT (filter/Mmult_GND_16_o_d33[15]_MuLt_3_OUT_PCOUT_to_Maddsub_PWR_18_o_d32[15]_MuLt_4_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d32[15]_MuLt_4_OUT (filter/Maddsub_PWR_18_o_d32[15]_MuLt_4_OUT_PCOUT_to_Maddsub_PWR_18_o_d29[15]_MuLt_10_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d29[15]_MuLt_10_OUT (filter/Maddsub_PWR_18_o_d29[15]_MuLt_10_OUT_PCOUT_to_Maddsub_PWR_18_o_d28[15]_MuLt_12_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d28[15]_MuLt_12_OUT (filter/Maddsub_PWR_18_o_d28[15]_MuLt_12_OUT_PCOUT_to_Maddsub_PWR_18_o_d27[15]_MuLt_14_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d27[15]_MuLt_14_OUT (filter/Maddsub_PWR_18_o_d27[15]_MuLt_14_OUT_PCOUT_to_Maddsub_PWR_18_o_d26[15]_MuLt_16_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d26[15]_MuLt_16_OUT (filter/Maddsub_PWR_18_o_d26[15]_MuLt_16_OUT_PCOUT_to_Maddsub_PWR_18_o_d25[15]_MuLt_18_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d25[15]_MuLt_18_OUT (filter/Maddsub_PWR_18_o_d25[15]_MuLt_18_OUT_PCOUT_to_Maddsub_GND_16_o_d24[15]_MuLt_20_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d24[15]_MuLt_20_OUT (filter/Maddsub_GND_16_o_d24[15]_MuLt_20_OUT_PCOUT_to_Maddsub_GND_16_o_d23[15]_MuLt_22_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d23[15]_MuLt_22_OUT (filter/Maddsub_GND_16_o_d23[15]_MuLt_22_OUT_PCOUT_to_Maddsub_GND_16_o_d22[15]_MuLt_24_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d22[15]_MuLt_24_OUT (filter/Maddsub_GND_16_o_d22[15]_MuLt_24_OUT_PCOUT_to_Maddsub_GND_16_o_d21[15]_MuLt_26_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d21[15]_MuLt_26_OUT (filter/Maddsub_GND_16_o_d21[15]_MuLt_26_OUT_PCOUT_to_Maddsub_GND_16_o_d20[15]_MuLt_28_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d20[15]_MuLt_28_OUT (filter/Maddsub_GND_16_o_d20[15]_MuLt_28_OUT_PCOUT_to_Maddsub_GND_16_o_d19[15]_MuLt_30_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d19[15]_MuLt_30_OUT (filter/Maddsub_GND_16_o_d19[15]_MuLt_30_OUT_PCOUT_to_Maddsub_GND_16_o_d18[15]_MuLt_32_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d18[15]_MuLt_32_OUT (filter/Maddsub_GND_16_o_d18[15]_MuLt_32_OUT_PCOUT_to_Maddsub_GND_16_o_d17[15]_MuLt_34_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d17[15]_MuLt_34_OUT (filter/Maddsub_GND_16_o_d17[15]_MuLt_34_OUT_PCOUT_to_Maddsub_GND_16_o_d16[15]_MuLt_36_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d16[15]_MuLt_36_OUT (filter/Maddsub_GND_16_o_d16[15]_MuLt_36_OUT_PCOUT_to_Maddsub_GND_16_o_d15[15]_MuLt_38_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d15[15]_MuLt_38_OUT (filter/Maddsub_GND_16_o_d15[15]_MuLt_38_OUT_PCOUT_to_Maddsub_GND_16_o_d14[15]_MuLt_40_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d14[15]_MuLt_40_OUT (filter/Maddsub_GND_16_o_d14[15]_MuLt_40_OUT_PCOUT_to_Maddsub_GND_16_o_d13[15]_MuLt_42_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d13[15]_MuLt_42_OUT (filter/Maddsub_GND_16_o_d13[15]_MuLt_42_OUT_PCOUT_to_Maddsub_GND_16_o_d12[15]_MuLt_44_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d12[15]_MuLt_44_OUT (filter/Maddsub_GND_16_o_d12[15]_MuLt_44_OUT_PCOUT_to_Maddsub_GND_16_o_d11[15]_MuLt_46_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d11[15]_MuLt_46_OUT (filter/Maddsub_GND_16_o_d11[15]_MuLt_46_OUT_PCOUT_to_Maddsub_GND_16_o_d10[15]_MuLt_48_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_GND_16_o_d10[15]_MuLt_48_OUT (filter/Maddsub_GND_16_o_d10[15]_MuLt_48_OUT_PCOUT_to_Maddsub_PWR_18_o_d9[15]_MuLt_50_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d9[15]_MuLt_50_OUT (filter/Maddsub_PWR_18_o_d9[15]_MuLt_50_OUT_PCOUT_to_Maddsub_PWR_18_o_d8[15]_MuLt_52_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d8[15]_MuLt_52_OUT (filter/Maddsub_PWR_18_o_d8[15]_MuLt_52_OUT_PCOUT_to_Maddsub_PWR_18_o_d7[15]_MuLt_54_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d7[15]_MuLt_54_OUT (filter/Maddsub_PWR_18_o_d7[15]_MuLt_54_OUT_PCOUT_to_Maddsub_PWR_18_o_d6[15]_MuLt_56_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d6[15]_MuLt_56_OUT (filter/Maddsub_PWR_18_o_d6[15]_MuLt_56_OUT_PCOUT_to_Maddsub_PWR_18_o_d5[15]_MuLt_58_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d5[15]_MuLt_58_OUT (filter/Maddsub_PWR_18_o_d5[15]_MuLt_58_OUT_PCOUT_to_Maddsub_PWR_18_o_d4[15]_MuLt_60_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d4[15]_MuLt_60_OUT (filter/Maddsub_PWR_18_o_d4[15]_MuLt_60_OUT_PCOUT_to_Maddsub_PWR_18_o_d3[15]_MuLt_62_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d3[15]_MuLt_62_OUT (filter/Maddsub_PWR_18_o_d3[15]_MuLt_62_OUT_PCOUT_to_Maddsub_PWR_18_o_d2[15]_MuLt_64_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.427   0.000  filter/Maddsub_PWR_18_o_d2[15]_MuLt_64_OUT (filter/Maddsub_PWR_18_o_d2[15]_MuLt_64_OUT_PCOUT_to_Maddsub_GND_16_o_d1[15]_MuLt_66_OUT_PCIN_47)
+     DSP48E1:PCIN47->P1    2   1.349   0.517  filter/Maddsub_GND_16_o_d1[15]_MuLt_66_OUT (filter/ADDER_FOR_MULTADD_Madd_1136)
+     LUT3:I0->O            1   0.061   0.357  filter/ADDERTREE_INTERNAL_Madd11 (filter/ADDERTREE_INTERNAL_Madd11)
+     LUT4:I3->O            1   0.061   0.000  filter/ADDERTREE_INTERNAL_Madd1_lut<0>2 (filter/ADDERTREE_INTERNAL_Madd1_lut<0>2)
+     MUXCY:S->O            1   0.248   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_1 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>2)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_2 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>3)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_3 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>4)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_4 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>5)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_5 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>6)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_6 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>7)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_7 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>8)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_8 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>9)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_9 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>10)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_10 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>11)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_11 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>12)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_12 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>13)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_13 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>14)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_14 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>15)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_15 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>16)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_16 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>17)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_17 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>18)
+     MUXCY:CI->O           1   0.017   0.000  filter/ADDERTREE_INTERNAL_Madd1_cy<0>_18 (filter/ADDERTREE_INTERNAL_Madd1_cy<0>19)
+     XORCY:CI->O           2   0.204   0.344  filter/ADDERTREE_INTERNAL_Madd1_xor<0>_19 (filter/ADDERTREE_INTERNAL_Madd_201)
+     INV:I->O              1   0.079   0.000  filter/Msub_n0282_lut<20>_INV_0 (filter/Msub_n0282_lut<20>)
+     MUXCY:S->O            1   0.248   0.000  filter/Msub_n0282_cy<20> (filter/Msub_n0282_cy<20>)
+     XORCY:CI->O           1   0.204   0.339  filter/Msub_n0282_xor<21> (filter/n0282<21>)
+     INV:I->O              1   0.079   0.000  filter/Msub_GND_16_o_unary_minus_72_OUT_lut<11>_INV_0 (filter/Msub_GND_16_o_unary_minus_72_OUT_lut<11>)
+     MUXCY:S->O            0   0.248   0.000  filter/Msub_GND_16_o_unary_minus_72_OUT_cy<11> (filter/Msub_GND_16_o_unary_minus_72_OUT_cy<11>)
+     XORCY:CI->O           1   0.204   0.357  filter/Msub_GND_16_o_unary_minus_72_OUT_xor<12> (filter/GND_16_o_unary_minus_72_OUT<12>)
+     LUT3:I2->O            1   0.061   0.000  filter/Mmux_n028441 (filter/n0284<12>)
+     FDE:D                    -0.002          filter/y_12
+    ----------------------------------------
+    Total                     49.977ns (48.062ns logic, 1.915ns route)
+                                       (96.2% logic, 3.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.700ns (frequency: 370.398MHz)
+  Total number of paths / destination ports: 990 / 82
+-------------------------------------------------------------------------
+Delay:               2.700ns (Levels of Logic = 3)
+  Source:            uart_tx/bit_timer_5 (FF)
+  Destination:       uart_tx/bit_timer_15 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: uart_tx/bit_timer_5 to uart_tx/bit_timer_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.317   0.701  uart_tx/bit_timer_5 (uart_tx/bit_timer_5)
+     LUT6:I0->O            1   0.061   0.696  uart_tx/bit_timer[15]_GND_35_o_equal_38_o<15>1 (uart_tx/bit_timer[15]_GND_35_o_equal_38_o<15>)
+     LUT6:I0->O           20   0.061   0.802  uart_tx/bit_timer[15]_GND_35_o_equal_38_o<15>3 (uart_tx/bit_timer[15]_GND_35_o_equal_38_o)
+     LUT6:I0->O            1   0.061   0.000  uart_tx/Mmux_state[3]_bit_timer[15]_wide_mux_43_OUT71 (uart_tx/state[3]_bit_timer[15]_wide_mux_43_OUT<15>)
+     FDCE:D                   -0.002          uart_tx/bit_timer_15
+    ----------------------------------------
+    Total                      2.700ns (0.500ns logic, 2.200ns route)
+                                       (18.5% logic, 81.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_div/cnt2_2'
+  Clock period: 35.779ns (frequency: 27.949MHz)
+  Total number of paths / destination ports: 2533914616242041000000000000000000 / 2866
+-------------------------------------------------------------------------
+Delay:               35.779ns (Levels of Logic = 382)
+  Source:            phase_band_top/mycordic/blk00000007 (FF)
+  Destination:       sec_inst (FF)
+  Source Clock:      clk_div/cnt2_2 rising
+  Destination Clock: clk_div/cnt2_2 rising
+
+  Data Path: phase_band_top/mycordic/blk00000007 to sec_inst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               6   0.317   0.540  blk00000007 (sig00000260)
+     LUT3:I0->O            2   0.061   0.431  blk00000535 (sig000001e2)
+     begin scope: 'phase_band_top/mycordic/blk000003a9:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          28   0.204   0.486  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk000003a9:S<5>'
+     LUT3:I2->O            1   0.061   0.357  blk0000051e (sig000001e8)
+     begin scope: 'phase_band_top/mycordic/blk00000346:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          28   0.204   0.486  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk00000346:S<6>'
+     LUT3:I2->O            2   0.061   0.362  blk00000520 (sig000001ed)
+     begin scope: 'phase_band_top/mycordic/blk000002e3:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          29   0.204   0.486  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk000002e3:S<7>'
+     LUT3:I2->O            1   0.061   0.357  blk00000522 (sig000001f3)
+     begin scope: 'phase_band_top/mycordic/blk00000280:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          29   0.204   0.486  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk00000280:S<8>'
+     LUT3:I2->O            2   0.061   0.362  blk00000525 (sig000001fa)
+     begin scope: 'phase_band_top/mycordic/blk0000021d:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          30   0.204   0.486  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk0000021d:S<9>'
+     LUT3:I2->O            1   0.061   0.357  blk00000528 (sig00000202)
+     begin scope: 'phase_band_top/mycordic/blk000001ba:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          30   0.204   0.486  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk000001ba:S<10>'
+     LUT3:I2->O            2   0.061   0.362  blk0000052c (sig0000020b)
+     begin scope: 'phase_band_top/mycordic/blk00000157:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          31   0.204   0.487  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk00000157:S<11>'
+     LUT3:I2->O            1   0.061   0.357  blk00000530 (sig00000215)
+     begin scope: 'phase_band_top/mycordic/blk000000f4:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          31   0.204   0.487  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk000000f4:S<12>'
+     LUT3:I2->O            2   0.061   0.362  blk00000513 (sig00000220)
+     begin scope: 'phase_band_top/mycordic/blk00000091:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          32   0.204   0.487  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk00000091:S<13>'
+     LUT3:I2->O            1   0.061   0.357  blk00000518 (sig0000022c)
+     begin scope: 'phase_band_top/mycordic/blk0000002e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          32   0.204   0.487  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk0000002e:S<14>'
+     LUT3:I2->O            2   0.061   0.362  blk000004bf (sig000001e0)
+     begin scope: 'phase_band_top/mycordic/blk0000005e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          34   0.204   0.487  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk0000005e:S<15>'
+     LUT3:I2->O            1   0.061   0.357  blk000004b8 (sig000001c5)
+     begin scope: 'phase_band_top/mycordic/blk000000be:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          31   0.204   0.487  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk000000be:S<16>'
+     LUT3:I2->O            2   0.061   0.362  blk000004c5 (sig0000019c)
+     begin scope: 'phase_band_top/mycordic/blk0000011e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          37   0.204   0.488  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk0000011e:S<17>'
+     LUT3:I2->O            1   0.061   0.357  blk000004cb (sig00000172)
+     begin scope: 'phase_band_top/mycordic/blk0000017e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          30   0.204   0.486  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk0000017e:S<18>'
+     LUT3:I2->O            2   0.061   0.362  blk000004d5 (sig00000147)
+     begin scope: 'phase_band_top/mycordic/blk000001de:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          40   0.204   0.488  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk000001de:S<19>'
+     LUT3:I2->O            1   0.061   0.357  blk000004da (sig0000011b)
+     begin scope: 'phase_band_top/mycordic/blk0000023e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          29   0.204   0.486  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk0000023e:S<20>'
+     LUT3:I2->O            2   0.061   0.362  blk000004e7 (sig000000ee)
+     begin scope: 'phase_band_top/mycordic/blk0000029e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          43   0.204   0.489  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk0000029e:S<21>'
+     LUT3:I2->O            1   0.061   0.357  blk000004eb (sig000000c0)
+     begin scope: 'phase_band_top/mycordic/blk000002fe:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          28   0.204   0.486  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk000002fe:S<22>'
+     LUT3:I2->O            2   0.061   0.362  blk000004fb (sig00000091)
+     begin scope: 'phase_band_top/mycordic/blk0000035e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          47   0.204   0.490  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk0000035e:S<23>'
+     LUT3:I2->O            1   0.061   0.357  blk000004fe (sig00000061)
+     begin scope: 'phase_band_top/mycordic/blk000003bd:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          25   0.204   0.486  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk000003bd:S<24>'
+     LUT2:I1->O            1   0.061   0.357  blk00000511 (sig00000030)
+     begin scope: 'phase_band_top/mycordic/blk00000409:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.204   0.357  sec_inst (sec_net)
+     end scope: 'phase_band_top/mycordic/blk00000409:S<25>'
+     begin scope: 'phase_band_top/mycordic/blk00000458:B<0>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.204   0.000  sec_inst (sec_net)
+     SEC:in                   -0.002          sec_inst
+    ----------------------------------------
+    Total                     35.779ns (17.525ns logic, 18.254ns route)
+                                       (49.0% logic, 51.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_div/clk_4_1'
+  Clock period: 33.716ns (frequency: 29.660MHz)
+  Total number of paths / destination ports: 329664721715509720000 / 282
+-------------------------------------------------------------------------
+Delay:               33.716ns (Levels of Logic = 91)
+  Source:            Gardner_1/pos_7 (FF)
+  Destination:       Gardner_1/pos_15 (FF)
+  Source Clock:      clk_div/clk_4_1 rising
+  Destination Clock: clk_div/clk_4_1 rising
+
+  Data Path: Gardner_1/pos_7 to Gardner_1/pos_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            34   0.317   0.469  Gardner_1/pos_7 (Gardner_1/pos_7)
+     DSP48E1:A7->P19       6   3.236   0.367  Gardner_1/Mmult_n0199 (Gardner_1/n0199<19>)
+     DSP48E1:B9->P15      34   3.049   0.696  Gardner_1/Mmult_n0200 (Gardner_1/Madd_n0206_lut<7>)
+     LUT4:I0->O            3   0.061   0.524  Gardner_1/Mmult_n0201_Madd_xor<16>111 (Gardner_1/Mmult_n0201_Madd_xor<16>11)
+     LUT6:I3->O            3   0.061   0.369  Gardner_1/Mmult_GND_26_o_GND_26_o_MuLt_43_OUT_Madd1_xor<9>11 (Gardner_1/Mmult_GND_26_o_GND_26_o_MuLt_43_OUT_Madd1_xor<9>11)
+     LUT5:I4->O            1   0.061   0.696  Gardner_1/Mmult_GND_26_o_GND_26_o_MuLt_43_OUT_Madd1_xor<11>11 (Gardner_1/Mmult_GND_26_o_GND_26_o_MuLt_43_OUT_Madd_121)
+     LUT6:I0->O            1   0.061   0.000  Gardner_1/Mmult_GND_26_o_GND_26_o_MuLt_43_OUT_Madd2_lut<12> (Gardner_1/Mmult_GND_26_o_GND_26_o_MuLt_43_OUT_Madd2_lut<12>)
+     MUXCY:S->O            1   0.248   0.000  Gardner_1/Mmult_GND_26_o_GND_26_o_MuLt_43_OUT_Madd2_cy<12> (Gardner_1/Mmult_GND_26_o_GND_26_o_MuLt_43_OUT_Madd2_cy<12>)
+     XORCY:CI->O           2   0.204   0.362  Gardner_1/Mmult_GND_26_o_GND_26_o_MuLt_43_OUT_Madd2_xor<13> (Gardner_1/GND_26_o_GND_26_o_MuLt_43_OUT<13>)
+     LUT1:I0->O            1   0.061   0.000  Gardner_1/Madd_n0217_cy<13>_rt (Gardner_1/Madd_n0217_cy<13>_rt)
+     MUXCY:S->O            1   0.248   0.000  Gardner_1/Madd_n0217_cy<13> (Gardner_1/Madd_n0217_cy<13>)
+     XORCY:CI->O           2   0.204   0.699  Gardner_1/Madd_n0217_xor<14> (Gardner_1/n0217<14>)
+     LUT5:I0->O            4   0.061   0.443  Gardner_1/Mmux_n02191211 (Gardner_1/Mmux_n0219121)
+     LUT3:I1->O            4   0.061   0.443  Gardner_1/Mmux_n02191411 (Gardner_1/Mmux_n0219141)
+     LUT5:I3->O            2   0.061   0.517  Gardner_1/Mmux_n0219151 (Gardner_1/n0219<8>)
+     LUT3:I0->O            1   0.061   0.357  Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>8 (Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>8)
+     LUT2:I1->O            1   0.061   0.000  Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_lut<0>9 (Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_lut<0>9)
+     MUXCY:S->O            1   0.248   0.000  Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_cy<0>_8 (Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_cy<0>9)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_cy<0>_9 (Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_cy<0>10)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_cy<0>_10 (Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_cy<0>11)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_cy<0>_11 (Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_cy<0>12)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_cy<0>_12 (Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_cy<0>13)
+     MUXCY:CI->O           0   0.017   0.000  Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_cy<0>_13 (Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_cy<0>14)
+     XORCY:CI->O           3   0.204   0.351  Gardner_1/Msub_GND_26_o_GND_26_o_sub_53_OUT<15:0>_xor<0>_14 (Gardner_1/GND_26_o_GND_26_o_sub_53_OUT<15>)
+     DSP48E1:B15->P10      2   3.049   0.344  Gardner_1/Mmult_GND_26_o_d_1[15]_MuLt_73_OUT (Gardner_1/GND_26_o_d_1[15]_MuLt_73_OUT<10>)
+     INV:I->O              1   0.079   0.000  Gardner_1/Msub_n0242_lut<10>_INV_0 (Gardner_1/Msub_n0242_lut<10>)
+     MUXCY:S->O            1   0.248   0.000  Gardner_1/Msub_n0242_cy<10> (Gardner_1/Msub_n0242_cy<10>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_n0242_cy<11> (Gardner_1/Msub_n0242_cy<11>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_n0242_cy<12> (Gardner_1/Msub_n0242_cy<12>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_n0242_cy<13> (Gardner_1/Msub_n0242_cy<13>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_n0242_cy<14> (Gardner_1/Msub_n0242_cy<14>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_n0242_cy<15> (Gardner_1/Msub_n0242_cy<15>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_n0242_cy<16> (Gardner_1/Msub_n0242_cy<16>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_n0242_cy<17> (Gardner_1/Msub_n0242_cy<17>)
+     XORCY:CI->O           1   0.204   0.339  Gardner_1/Msub_n0242_xor<18> (Gardner_1/n0242<18>)
+     INV:I->O              1   0.079   0.000  Gardner_1/Msub_GND_26_o_unary_minus_78_OUT_lut<8>_INV_0 (Gardner_1/Msub_GND_26_o_unary_minus_78_OUT_lut<8>)
+     MUXCY:S->O            1   0.248   0.000  Gardner_1/Msub_GND_26_o_unary_minus_78_OUT_cy<8> (Gardner_1/Msub_GND_26_o_unary_minus_78_OUT_cy<8>)
+     XORCY:CI->O           1   0.204   0.357  Gardner_1/Msub_GND_26_o_unary_minus_78_OUT_xor<9> (Gardner_1/GND_26_o_unary_minus_78_OUT<9>)
+     LUT6:I5->O            1   0.061   0.000  Gardner_1/ADDERTREE_INTERNAL_Madd1_lut<9> (Gardner_1/ADDERTREE_INTERNAL_Madd1_lut<9>)
+     MUXCY:S->O            1   0.248   0.000  Gardner_1/ADDERTREE_INTERNAL_Madd1_cy<9> (Gardner_1/ADDERTREE_INTERNAL_Madd1_cy<9>)
+     XORCY:CI->O           2   0.204   0.362  Gardner_1/ADDERTREE_INTERNAL_Madd1_xor<10> (Gardner_1/ADDERTREE_INTERNAL_Madd_101)
+     LUT3:I2->O            1   0.061   0.357  Gardner_1/ADDERTREE_INTERNAL_Madd210 (Gardner_1/ADDERTREE_INTERNAL_Madd210)
+     LUT4:I3->O            1   0.061   0.000  Gardner_1/ADDERTREE_INTERNAL_Madd2_lut<0>11 (Gardner_1/ADDERTREE_INTERNAL_Madd2_lut<0>11)
+     MUXCY:S->O            1   0.248   0.000  Gardner_1/ADDERTREE_INTERNAL_Madd2_cy<0>_10 (Gardner_1/ADDERTREE_INTERNAL_Madd2_cy<0>11)
+     XORCY:CI->O           6   0.204   0.724  Gardner_1/ADDERTREE_INTERNAL_Madd2_xor<0>_11 (Gardner_1/ADDERTREE_INTERNAL_Madd_122)
+     LUT6:I0->O            1   0.061   0.696  Gardner_1/GND_26_o_GND_26_o_LessThan_182_o211 (Gardner_1/GND_26_o_GND_26_o_LessThan_182_o211)
+     LUT6:I0->O            1   0.061   0.357  Gardner_1/GND_26_o_GND_26_o_LessThan_182_o213 (Gardner_1/GND_26_o_GND_26_o_LessThan_182_o21)
+     LUT3:I2->O            1   0.061   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_lut<0> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_lut<0>)
+     MUXCY:S->O            1   0.248   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<0> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<0>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<1> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<1>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<2> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<2>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<3> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<3>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<4> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<4>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<5> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<5>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<6> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<6>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<7> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<7>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<8> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<8>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<9> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<9>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<10> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<10>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<11> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<11>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<12> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<12>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<13> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<13>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<14> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<14>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<15> (Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_cy<15>)
+     XORCY:CI->O           1   0.204   0.339  Gardner_1/Msub_PWR_28_o_PWR_28_o_sub_107_OUT_xor<16> (Gardner_1/PWR_28_o_PWR_28_o_sub_107_OUT<16>)
+     DSP48E1:B16->P4       3   3.049   0.351  Gardner_1/Mmult_n0252 (Gardner_1/n0252<4>)
+     INV:I->O              1   0.079   0.000  Gardner_1/Msub_n0254_lut<6>_INV_0 (Gardner_1/Msub_n0254_lut<6>)
+     MUXCY:S->O            1   0.248   0.000  Gardner_1/Msub_n0254_cy<6> (Gardner_1/Msub_n0254_cy<6>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_n0254_cy<7> (Gardner_1/Msub_n0254_cy<7>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_n0254_cy<8> (Gardner_1/Msub_n0254_cy<8>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_n0254_cy<9> (Gardner_1/Msub_n0254_cy<9>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Msub_n0254_cy<10> (Gardner_1/Msub_n0254_cy<10>)
+     XORCY:CI->O           1   0.204   0.339  Gardner_1/Msub_n0254_xor<11> (Gardner_1/n0254<15>)
+     INV:I->O              1   0.079   0.000  Gardner_1/Msub_GND_26_o_unary_minus_112_OUT_lut<5>_INV_0 (Gardner_1/Msub_GND_26_o_unary_minus_112_OUT_lut<5>)
+     MUXCY:S->O            1   0.248   0.000  Gardner_1/Msub_GND_26_o_unary_minus_112_OUT_cy<5> (Gardner_1/Msub_GND_26_o_unary_minus_112_OUT_cy<5>)
+     XORCY:CI->O           2   0.204   0.362  Gardner_1/Msub_GND_26_o_unary_minus_112_OUT_xor<6> (Gardner_1/GND_26_o_unary_minus_112_OUT<6>)
+     LUT3:I2->O            1   0.061   0.000  Gardner_1/Msub_n0258_lut<8> (Gardner_1/Msub_n0258_lut<8>)
+     MUXCY:S->O            1   0.248   0.000  Gardner_1/Msub_n0258_cy<8> (Gardner_1/Msub_n0258_cy<8>)
+     XORCY:CI->O           1   0.204   0.339  Gardner_1/Msub_n0258_xor<9> (Gardner_1/n0258<17>)
+     INV:I->O              1   0.079   0.000  Gardner_1/Msub_GND_26_o_unary_minus_117_OUT_lut<7>_INV_0 (Gardner_1/Msub_GND_26_o_unary_minus_117_OUT_lut<7>)
+     MUXCY:S->O            1   0.248   0.000  Gardner_1/Msub_GND_26_o_unary_minus_117_OUT_cy<7> (Gardner_1/Msub_GND_26_o_unary_minus_117_OUT_cy<7>)
+     XORCY:CI->O           1   0.204   0.566  Gardner_1/Msub_GND_26_o_unary_minus_117_OUT_xor<8> (Gardner_1/GND_26_o_unary_minus_117_OUT<8>)
+     LUT6:I2->O            1   0.061   0.357  Gardner_1/Mmux_n0260141 (Gardner_1/n0260<8>)
+     LUT2:I1->O            1   0.061   0.000  Gardner_1/Madd_n0261_Madd_lut<9> (Gardner_1/Madd_n0261_Madd_lut<9>)
+     MUXCY:S->O            1   0.248   0.000  Gardner_1/Madd_n0261_Madd_cy<9> (Gardner_1/Madd_n0261_Madd_cy<9>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Madd_n0261_Madd_cy<10> (Gardner_1/Madd_n0261_Madd_cy<10>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Madd_n0261_Madd_cy<11> (Gardner_1/Madd_n0261_Madd_cy<11>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Madd_n0261_Madd_cy<12> (Gardner_1/Madd_n0261_Madd_cy<12>)
+     MUXCY:CI->O           1   0.017   0.000  Gardner_1/Madd_n0261_Madd_cy<13> (Gardner_1/Madd_n0261_Madd_cy<13>)
+     MUXCY:CI->O           0   0.017   0.000  Gardner_1/Madd_n0261_Madd_cy<14> (Gardner_1/Madd_n0261_Madd_cy<14>)
+     XORCY:CI->O           1   0.204   0.426  Gardner_1/Madd_n0261_Madd_xor<15> (Gardner_1/n0261<15>)
+     LUT2:I0->O            1   0.061   0.000  Gardner_1/Mmux__n045471 (Gardner_1/_n0454<15>)
+     FDCE:D                   -0.002          Gardner_1/pos_15
+    ----------------------------------------
+    Total                     33.716ns (20.803ns logic, 12.913ns route)
+                                       (61.7% logic, 38.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_div/clk_128_1'
+  Total number of paths / destination ports: 164 / 164
+-------------------------------------------------------------------------
+Offset:              1.915ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       downsample/y_15 (FF)
+  Destination Clock: clk_div/clk_128_1 rising
+
+  Data Path: reset to downsample/y_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   0.003   0.491  reset_IBUF (reset_IBUF)
+     LUT3:I2->O            1   0.061   0.696  downsample/_n0056_inv_SW0 (N7)
+     LUT6:I0->O           13   0.061   0.407  downsample/_n0056_inv (downsample/_n0056_inv)
+     FDE:CE                    0.196          downsample/y_3
+    ----------------------------------------
+    Total                      1.915ns (0.321ns logic, 1.594ns route)
+                                       (16.8% logic, 83.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              1.435ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       uart_tx/state_FSM_FFd1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to uart_tx/state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   0.003   0.473  reset_IBUF (reset_IBUF)
+     INV:I->O            281   0.079   0.515  reset_inv1_INV_0 (Gardner_1/reset_inv)
+     FDPE:PRE                  0.365          uart_tx/txd
+    ----------------------------------------
+    Total                      1.435ns (0.447ns logic, 0.988ns route)
+                                       (31.2% logic, 68.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_div/cnt2_2'
+  Total number of paths / destination ports: 69 / 69
+-------------------------------------------------------------------------
+Offset:              1.435ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       phase_band_top/freq_part_20 (FF)
+  Destination Clock: clk_div/cnt2_2 rising
+
+  Data Path: reset to phase_band_top/freq_part_20
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   0.003   0.473  reset_IBUF (reset_IBUF)
+     INV:I->O            281   0.079   0.515  reset_inv1_INV_0 (Gardner_1/reset_inv)
+     FDC:CLR                   0.365          phase_band_top/sign_I_Q_0
+    ----------------------------------------
+    Total                      1.435ns (0.447ns logic, 0.988ns route)
+                                       (31.2% logic, 68.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_div/clk_4_1'
+  Total number of paths / destination ports: 144 / 144
+-------------------------------------------------------------------------
+Offset:              1.619ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       Gardner_1/led_2_2 (FF)
+  Destination Clock: clk_div/clk_4_1 rising
+
+  Data Path: reset to Gardner_1/led_2_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   0.003   0.491  reset_IBUF (reset_IBUF)
+     LUT4:I3->O           20   0.061   0.463  Gardner_1/_n0482_inv1 (Gardner_1/_n0482_inv)
+     LUT5:I4->O            2   0.061   0.344  Gardner_1/_n0506_inv1 (Gardner_1/_n0506_inv)
+     FDE:CE                    0.196          Gardner_1/led_2_1
+    ----------------------------------------
+    Total                      1.619ns (0.321ns logic, 1.298ns route)
+                                       (19.8% logic, 80.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_div/clk_128_1'
+  Total number of paths / destination ports: 243 / 73
+-------------------------------------------------------------------------
+Offset:              2.765ns (Levels of Logic = 3)
+  Source:            ROM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram (RAM)
+  Destination:       douta<3> (PAD)
+  Source Clock:      clk_div/clk_128_1 rising
+
+  Data Path: ROM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram to douta<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOADO0    1   1.784   0.566  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.ram_douta)
+     LUT5:I1->O            3   0.061   0.351  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux151 (douta<3>)
+     end scope: 'ROM:douta<3>'
+     OBUF:I->O                 0.003          douta_3_OBUF (douta<3>)
+    ----------------------------------------
+    Total                      2.765ns (1.848ns logic, 0.917ns route)
+                                       (66.8% logic, 33.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_div/clk_4_1'
+  Total number of paths / destination ports: 30 / 30
+-------------------------------------------------------------------------
+Offset:              0.693ns (Levels of Logic = 1)
+  Source:            Gardner_1/led_2 (FF)
+  Destination:       led<7> (PAD)
+  Source Clock:      clk_div/clk_4_1 rising
+
+  Data Path: Gardner_1/led_2 to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              7   0.317   0.373  Gardner_1/led_2 (Gardner_1/led_2)
+     OBUF:I->O                 0.003          led_7_OBUF (led<7>)
+    ----------------------------------------
+    Total                      0.693ns (0.320ns logic, 0.373ns route)
+                                       (46.2% logic, 53.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.659ns (Levels of Logic = 1)
+  Source:            uart_tx/txd (FF)
+  Destination:       rxd (PAD)
+  Source Clock:      clk rising
+
+  Data Path: uart_tx/txd to rxd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             1   0.317   0.339  uart_tx/txd (uart_tx/txd)
+     OBUF:I->O                 0.003          rxd_OBUF (rxd)
+    ----------------------------------------
+    Total                      0.659ns (0.320ns logic, 0.339ns route)
+                                       (48.5% logic, 51.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.700|         |         |         |
+clk_div/clk_4_1|    0.978|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_div/clk_128_1
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+clk_div/clk_128_1|   49.977|         |         |         |
+clk_div/cnt2_2   |    1.442|         |         |         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_div/clk_4_1
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+clk_div/clk_128_1|    1.576|         |         |         |
+clk_div/clk_4_1  |   33.716|         |         |         |
+-----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_div/cnt2_2
+-----------------+---------+---------+---------+---------+
+                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------+---------+---------+---------+---------+
+clk_div/clk_128_1|   16.940|         |         |         |
+clk_div/cnt2_2   |   35.779|         |         |         |
+-----------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 30.00 secs
+Total CPU time to Xst completion: 29.76 secs
+ 
+--> 
+
+Total memory usage is 488112 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   98 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
+

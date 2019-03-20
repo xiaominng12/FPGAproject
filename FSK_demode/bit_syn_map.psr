@@ -1,0 +1,64 @@
+Release 14.7 Physical Synthesis Report P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc. All rights reserved.
+
+TABLE OF CONTENTS
+  1) Physical Synthesis Options Summary
+  2) Optimizations statistics and details
+
+
+=========================================================================
+*                 Physical Synthesis Options Summary                    *
+=========================================================================
+---- Options
+Global Optimization                 : OFF
+    Retiming                        : OFF
+    Equivalent Register Removal     : OFF
+Timing-Driven Packing and Placement : ON
+    Logic Optimization              : ON
+    Register Duplication            : ON
+
+---- Intelligent clock gating       : OFF
+
+---- Target Parameters
+Target Device                       : 6vlx240tff1156-2
+
+=========================================================================
+
+
+=========================================================================
+*                        Optimizations                                  *
+=========================================================================
+---- Statistics
+   Number of LUTs added by Replication                       | 21              
+
+   Overall change in number of design objects                | +21              
+
+
+---- Details
+
+New or modified components                             | Optimization             | Objective           
+-------------------------------------------------------|--------------------------|----------------------
+phase_band_top/mycordic/blk000004ea_REPLICA_20         | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk0000054e_REPLICA_17         | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk0000054f_REPLICA_8          | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk00000554_REPLICA_18         | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk00000555_REPLICA_3          | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk00000566_REPLICA_7          | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk00000574_REPLICA_11         | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk00000575_REPLICA_5          | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk0000057f_REPLICA_6          | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk00000586_REPLICA_16         | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk0000058e_REPLICA_15         | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk00000591_REPLICA_12         | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk00000597_REPLICA_14         | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk00000599_REPLICA_4          | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk0000059d_REPLICA_13         | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk000005a1_REPLICA_19         | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk000005a3_REPLICA_9          | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk000005a5_REPLICA_0          | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk000005ac_REPLICA_1          | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk000005ad_REPLICA_10         | Replication              | Fanout Optimization
+phase_band_top/mycordic/blk000005af_REPLICA_2          | Replication              | Fanout Optimization
+
+   Flops added for Enable Generation                       
+-------------------------

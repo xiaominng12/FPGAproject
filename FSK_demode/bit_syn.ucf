@@ -1,0 +1,8 @@
+NET "clk" LOC = J9;
+NET "reset" LOC = D22;
+NET "key" LOC =  C22;
+NET "led[0]" LOC = AD21;
+NET "led[1]" LOC = AH27;
+NET "led[2]" LOC = AE21; 
+NET "rxd" LOC = J25;
+NET "key1" LOC = L21;

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/ISEproject/phase_band_top3/test_jidai_isim_beh.exe" -prj "E:/ISEproject/phase_band_top3/test_jidai_beh.prj" "work.test_jidai" "work.glbl" 

@@ -1,0 +1,1001 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: phase_band_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "phase_band_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "phase_band_top"
+Output Format                      : NGC
+Target Device                      : xc6vcx130t-2-ff484
+
+---- Source Options
+Top Module Name                    : phase_band_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\ISEproject\phase_band_top2\ipcore_dir\mycordic.v" into library work
+Parsing module <mycordic>.
+Analyzing Verilog file "E:\ISEproject\phase_band_top2\ipcore_dir\divider.v" into library work
+Parsing module <divider>.
+Analyzing Verilog file "E:\ISEproject\phase_band_top2\ipcore_dir\cordic.v" into library work
+Parsing module <cordic>.
+Analyzing Verilog file "E:\ISEproject\phase_band_top2\phase_band_top2.v" into library work
+Parsing module <phase_band_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <phase_band_top>.
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 82: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 83: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 84: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 85: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 86: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 87: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 89: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 90: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 91: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 92: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 93: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 94: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:1127 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 100: Assignment to cos1 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 77: Result of 42-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:1127 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 117: Assignment to I_pll1 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 144: Result of 32-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:1127 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 134: Assignment to I_Q_pll3 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 148: Result of 35-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 164: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:1127 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 150: Assignment to dis_out ignored, since the identifier is never used
+
+Elaborating module <cordic>.
+WARNING:HDLCompiler:1127 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 182: Assignment to rdy ignored, since the identifier is never used
+
+Elaborating module <mycordic>.
+WARNING:HDLCompiler:189 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 187: Size mismatch in connection of port <x_in>. Formal port size is 41-bit while actual signal size is 42-bit.
+WARNING:HDLCompiler:1127 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 189: Assignment to rdy1 ignored, since the identifier is never used
+
+Elaborating module <divider>.
+WARNING:HDLCompiler:1127 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" Line 198: Assignment to rfd ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <phase_band_top>.
+    Related source file is "E:\ISEproject\phase_band_top2\phase_band_top2.v".
+        pi = 51470
+        sqrt2 = 23170
+        C1 = 8213
+        C2 = 225
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" line 177: Output port <rdy> of the instance <cordic> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" line 185: Output port <rdy> of the instance <mycordic> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\ISEproject\phase_band_top2\phase_band_top2.v" line 192: Output port <rfd> of the instance <divider> is unconnected or connected to loadless signal.
+    Found 21-bit register for signal <sign_I_Q>.
+    Found 21-bit register for signal <freq_part>.
+    Found 21-bit register for signal <nco_phase_buf>.
+    Found 6-bit register for signal <cnt1>.
+    Found 42-bit subtractor for signal <GND_1_o_unary_minus_59_OUT> created at line 77.
+    Found 42-bit subtractor for signal <GND_1_o_unary_minus_65_OUT> created at line 77.
+    Found 42-bit subtractor for signal <GND_1_o_unary_minus_72_OUT> created at line 77.
+    Found 42-bit subtractor for signal <GND_1_o_unary_minus_78_OUT> created at line 77.
+    Found 21-bit subtractor for signal <Q_pll> created at line 115.
+    Found 42-bit subtractor for signal <GND_1_o_unary_minus_90_OUT> created at line 77.
+    Found 42-bit subtractor for signal <GND_1_o_unary_minus_118_OUT> created at line 77.
+    Found 42-bit subtractor for signal <GND_1_o_unary_minus_125_OUT> created at line 77.
+    Found 22-bit adder for signal <n0188> created at line 83.
+    Found 22-bit adder for signal <n0189> created at line 84.
+    Found 22-bit adder for signal <n0190> created at line 85.
+    Found 22-bit adder for signal <n0191> created at line 86.
+    Found 22-bit adder for signal <n0192> created at line 87.
+    Found 21-bit adder for signal <I_pll> created at line 114.
+    Found 42-bit adder for signal <I_Q_pll1> created at line 131.
+    Found 6-bit adder for signal <cnt1[5]_GND_1_o_add_106_OUT> created at line 164.
+    Found 21-bit adder for signal <GND_1_o_freq_part[20]_add_119_OUT> created at line 169.
+    Found 21-bit adder for signal <n0411> created at line 170.
+    Found 21-bit adder for signal <nco_phase_buf[20]_freq_part[20]_add_127_OUT> created at line 170.
+    Found 21-bit subtractor for signal <nco_phase_buf[20]_GND_1_o_sub_23_OUT<20:0>> created at line 89.
+    Found 21-bit subtractor for signal <nco_phase_buf[20]_GND_1_o_sub_26_OUT<20:0>> created at line 90.
+    Found 21-bit subtractor for signal <nco_phase_buf[20]_GND_1_o_sub_29_OUT<20:0>> created at line 91.
+    Found 21-bit subtractor for signal <nco_phase_buf[20]_GND_1_o_sub_32_OUT<20:0>> created at line 92.
+    Found 21-bit subtractor for signal <nco_phase_buf[20]_GND_1_o_sub_35_OUT<20:0>> created at line 93.
+    Found 21-bit subtractor for signal <nco_phase_buf[20]_GND_1_o_sub_38_OUT<20:0>> created at line 94.
+    Found 21-bit subtractor for signal <PWR_1_o_PWR_1_o_sub_102_OUT<20:0>> created at line 144.
+    Found 7-bit subtractor for signal <dis_out1[20]_GND_1_o_sub_105_OUT<6:0>> created at line 148.
+    Found 42-bit subtractor for signal <n0248> created at line 77.
+    Found 42-bit subtractor for signal <n0254> created at line 77.
+    Found 42-bit subtractor for signal <n0235> created at line 77.
+    Found 42-bit subtractor for signal <n0228> created at line 77.
+    Found 42-bit subtractor for signal <n0213> created at line 77.
+    Found 42-bit subtractor for signal <n0223> created at line 77.
+    Found 42-bit subtractor for signal <n0218> created at line 77.
+    Found 21x16-bit multiplier for signal <Ic[20]_cos[15]_MuLt_54_OUT> created at line 114.
+    Found 21x16-bit multiplier for signal <Qc[20]_sine[15]_MuLt_60_OUT> created at line 114.
+    Found 21x16-bit multiplier for signal <Qc[20]_cos[15]_MuLt_67_OUT> created at line 115.
+    Found 21x16-bit multiplier for signal <Ic[20]_sine[15]_MuLt_73_OUT> created at line 115.
+    Found 21x21-bit multiplier for signal <n0394> created at line 131.
+    Found 21x21-bit multiplier for signal <n0395> created at line 131.
+    Found 21x15-bit multiplier for signal <I_Q_pll2[20]_PWR_1_o_MuLt_85_OUT> created at line 132.
+    Found 32x21-bit multiplier for signal <n0239> created at line 144.
+    Found 32x21-bit multiplier for signal <n0242> created at line 144.
+    Found 21x9-bit multiplier for signal <dis_out3[20]_GND_1_o_MuLt_113_OUT> created at line 169.
+    Found 21x15-bit multiplier for signal <dis_out3[20]_GND_1_o_MuLt_120_OUT> created at line 170.
+    Found 32-bit comparator lessequal for signal <PWR_1_o_nco_phase_buf[20]_LessThan_2_o> created at line 82
+    Found 32-bit comparator greater for signal <PWR_1_o_nco_phase_buf[20]_LessThan_5_o> created at line 83
+    Found 32-bit comparator greater for signal <PWR_1_o_nco_phase_buf[20]_LessThan_8_o> created at line 84
+    Found 32-bit comparator greater for signal <PWR_1_o_nco_phase_buf[20]_LessThan_11_o> created at line 85
+    Found 32-bit comparator greater for signal <PWR_1_o_nco_phase_buf[20]_LessThan_14_o> created at line 86
+    Found 32-bit comparator greater for signal <PWR_1_o_nco_phase_buf[20]_LessThan_17_o> created at line 87
+    Found 32-bit comparator greater for signal <n0030> created at line 88
+    Found 32-bit comparator greater for signal <GND_1_o_nco_phase_buf[20]_LessThan_22_o> created at line 89
+    Found 32-bit comparator greater for signal <GND_1_o_nco_phase_buf[20]_LessThan_25_o> created at line 90
+    Found 32-bit comparator greater for signal <GND_1_o_nco_phase_buf[20]_LessThan_28_o> created at line 91
+    Found 32-bit comparator greater for signal <GND_1_o_nco_phase_buf[20]_LessThan_31_o> created at line 92
+    Found 32-bit comparator greater for signal <GND_1_o_nco_phase_buf[20]_LessThan_34_o> created at line 93
+    Found 32-bit comparator lessequal for signal <n0059> created at line 94
+    Found 42-bit comparator greater for signal <Ic[20]_GND_1_o_LessThan_56_o> created at line 77
+    Found 42-bit comparator greater for signal <Qc[20]_GND_1_o_LessThan_62_o> created at line 77
+    Found 42-bit comparator greater for signal <Qc[20]_GND_1_o_LessThan_69_o> created at line 77
+    Found 42-bit comparator greater for signal <Ic[20]_GND_1_o_LessThan_75_o> created at line 77
+    Found 32-bit comparator greater for signal <I_pll[20]_GND_1_o_LessThan_92_o> created at line 144
+    Found 32-bit comparator greater for signal <Q_pll[20]_GND_1_o_LessThan_97_o> created at line 144
+    Found 6-bit comparator greater for signal <cnt1[5]_PWR_1_o_LessThan_106_o> created at line 163
+    Found 42-bit comparator greater for signal <dis_out3[20]_GND_1_o_LessThan_115_o> created at line 77
+    Found 42-bit comparator greater for signal <dis_out3[20]_GND_1_o_LessThan_122_o> created at line 77
+    Summary:
+	inferred  11 Multiplier(s).
+	inferred  29 Adder/Subtractor(s).
+	inferred  69 D-type flip-flop(s).
+	inferred  22 Comparator(s).
+	inferred  35 Multiplexer(s).
+Unit <phase_band_top> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 11
+ 21x15-bit multiplier                                  : 2
+ 21x16-bit multiplier                                  : 4
+ 21x21-bit multiplier                                  : 2
+ 21x9-bit multiplier                                   : 1
+ 32x21-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 29
+ 21-bit adder                                          : 4
+ 21-bit subtractor                                     : 3
+ 22-bit adder                                          : 5
+ 42-bit adder                                          : 1
+ 42-bit subtractor                                     : 14
+ 6-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+# Registers                                            : 4
+ 21-bit register                                       : 3
+ 6-bit register                                        : 1
+# Comparators                                          : 22
+ 32-bit comparator greater                             : 13
+ 32-bit comparator lessequal                           : 2
+ 42-bit comparator greater                             : 6
+ 6-bit comparator greater                              : 1
+# Multiplexers                                         : 35
+ 1-bit 2-to-1 multiplexer                              : 7
+ 21-bit 2-to-1 multiplexer                             : 18
+ 32-bit 2-to-1 multiplexer                             : 2
+ 42-bit 2-to-1 multiplexer                             : 7
+ 6-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/cordic.ngc>.
+Reading Secure Unit <blk00000015>.
+Reading core <ipcore_dir/mycordic.ngc>.
+Reading Secure Unit <blk0000002e>.
+Reading core <ipcore_dir/divider.ngc>.
+Loading core <cordic> for timing and area information for instance <cordic>.
+Loading core <mycordic> for timing and area information for instance <mycordic>.
+Loading core <divider> for timing and area information for instance <divider>.
+
+Synthesizing (advanced) Unit <phase_band_top>.
+The following registers are absorbed into accumulator <freq_part>: 1 register on signal <freq_part>.
+The following registers are absorbed into counter <cnt1>: 1 register on signal <cnt1>.
+Unit <phase_band_top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 11
+ 21x15-bit multiplier                                  : 2
+ 21x16-bit multiplier                                  : 4
+ 21x21-bit multiplier                                  : 2
+ 21x9-bit multiplier                                   : 1
+ 32x21-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 27
+ 21-bit adder                                          : 8
+ 21-bit subtractor                                     : 3
+ 41-bit adder                                          : 1
+ 42-bit subtractor                                     : 14
+ 7-bit subtractor                                      : 1
+# Counters                                             : 1
+ 6-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 21-bit up accumulator                                 : 1
+# Registers                                            : 42
+ Flip-Flops                                            : 42
+# Comparators                                          : 22
+ 32-bit comparator greater                             : 13
+ 32-bit comparator lessequal                           : 2
+ 42-bit comparator greater                             : 6
+ 6-bit comparator greater                              : 1
+# Multiplexers                                         : 34
+ 1-bit 2-to-1 multiplexer                              : 7
+ 21-bit 2-to-1 multiplexer                             : 18
+ 32-bit 2-to-1 multiplexer                             : 2
+ 42-bit 2-to-1 multiplexer                             : 7
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <phase_band_top> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block phase_band_top, actual ratio is 3.
+INFO:Xst:2260 - The FF/Latch <blk00000004> in Unit <cordic> is equivalent to the following 3 FFs/Latches : <blk00000cf5> <blk00000cf6> <blk00000cf7> 
+INFO:Xst:2260 - The FF/Latch <blk00000004> in Unit <cordic> is equivalent to the following 3 FFs/Latches : <blk00000cf5> <blk00000cf6> <blk00000cf7> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 69
+ Flip-Flops                                            : 69
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : phase_band_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 9308
+#      GND                         : 26
+#      INV                         : 606
+#      LUT1                        : 94
+#      LUT2                        : 875
+#      LUT3                        : 1556
+#      LUT4                        : 50
+#      LUT5                        : 286
+#      LUT6                        : 159
+#      MUXCY                       : 2809
+#      VCC                         : 26
+#      XORCY                       : 2821
+# FlipFlops/Latches                : 2727
+#      FD                          : 2558
+#      FDC                         : 27
+#      FDCE                        : 42
+#      FDE                         : 77
+#      FDR                         : 21
+#      FDRE                        : 2
+# Shift Registers                  : 46
+#      SRLC16E                     : 42
+#      SRLC32E                     : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 64
+#      IBUF                        : 43
+#      OBUF                        : 21
+# DSPs                             : 15
+#      DSP48E1                     : 15
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vcx130tff484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            2727  out of  160000     1%  
+ Number of Slice LUTs:                 3672  out of  80000     4%  
+    Number used as Logic:              3626  out of  80000     4%  
+    Number used as Memory:               46  out of  27840     0%  
+       Number used as SRL:               46
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   5480
+   Number with an unused Flip Flop:    2753  out of   5480    50%  
+   Number with an unused LUT:          1808  out of   5480    32%  
+   Number of fully used LUT-FF pairs:   919  out of   5480    16%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                          66
+ Number of bonded IOBs:                  65  out of    240    27%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                     15  out of    480     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_ip                             | BUFGP                  | 2773  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 35.779ns (Maximum Frequency: 27.949MHz)
+   Minimum input arrival time before clock: 14.718ns
+   Maximum output required time after clock: 0.676ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_ip'
+  Clock period: 35.779ns (frequency: 27.949MHz)
+  Total number of paths / destination ports: 2533914616242041500000000000000000 / 2866
+-------------------------------------------------------------------------
+Delay:               35.779ns (Levels of Logic = 382)
+  Source:            mycordic/blk00000007 (FF)
+  Destination:       sec_inst (FF)
+  Source Clock:      clk_ip rising
+  Destination Clock: clk_ip rising
+
+  Data Path: mycordic/blk00000007 to sec_inst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               6   0.317   0.540  blk00000007 (sig00000260)
+     LUT3:I0->O            2   0.061   0.431  blk00000535 (sig000001e2)
+     begin scope: 'mycordic/blk000003a9:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          28   0.204   0.486  sec_inst (sec_net)
+     end scope: 'mycordic/blk000003a9:S<5>'
+     LUT3:I2->O            1   0.061   0.357  blk0000051e (sig000001e8)
+     begin scope: 'mycordic/blk00000346:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          28   0.204   0.486  sec_inst (sec_net)
+     end scope: 'mycordic/blk00000346:S<6>'
+     LUT3:I2->O            2   0.061   0.362  blk00000520 (sig000001ed)
+     begin scope: 'mycordic/blk000002e3:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          29   0.204   0.486  sec_inst (sec_net)
+     end scope: 'mycordic/blk000002e3:S<7>'
+     LUT3:I2->O            1   0.061   0.357  blk00000522 (sig000001f3)
+     begin scope: 'mycordic/blk00000280:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          29   0.204   0.486  sec_inst (sec_net)
+     end scope: 'mycordic/blk00000280:S<8>'
+     LUT3:I2->O            2   0.061   0.362  blk00000525 (sig000001fa)
+     begin scope: 'mycordic/blk0000021d:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          30   0.204   0.486  sec_inst (sec_net)
+     end scope: 'mycordic/blk0000021d:S<9>'
+     LUT3:I2->O            1   0.061   0.357  blk00000528 (sig00000202)
+     begin scope: 'mycordic/blk000001ba:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          30   0.204   0.486  sec_inst (sec_net)
+     end scope: 'mycordic/blk000001ba:S<10>'
+     LUT3:I2->O            2   0.061   0.362  blk0000052c (sig0000020b)
+     begin scope: 'mycordic/blk00000157:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          31   0.204   0.487  sec_inst (sec_net)
+     end scope: 'mycordic/blk00000157:S<11>'
+     LUT3:I2->O            1   0.061   0.357  blk00000530 (sig00000215)
+     begin scope: 'mycordic/blk000000f4:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          31   0.204   0.487  sec_inst (sec_net)
+     end scope: 'mycordic/blk000000f4:S<12>'
+     LUT3:I2->O            2   0.061   0.362  blk00000513 (sig00000220)
+     begin scope: 'mycordic/blk00000091:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          32   0.204   0.487  sec_inst (sec_net)
+     end scope: 'mycordic/blk00000091:S<13>'
+     LUT3:I2->O            1   0.061   0.357  blk00000518 (sig0000022c)
+     begin scope: 'mycordic/blk0000002e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          32   0.204   0.487  sec_inst (sec_net)
+     end scope: 'mycordic/blk0000002e:S<14>'
+     LUT3:I2->O            2   0.061   0.362  blk000004bf (sig000001e0)
+     begin scope: 'mycordic/blk0000005e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          34   0.204   0.487  sec_inst (sec_net)
+     end scope: 'mycordic/blk0000005e:S<15>'
+     LUT3:I2->O            1   0.061   0.357  blk000004b8 (sig000001c5)
+     begin scope: 'mycordic/blk000000be:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          31   0.204   0.487  sec_inst (sec_net)
+     end scope: 'mycordic/blk000000be:S<16>'
+     LUT3:I2->O            2   0.061   0.362  blk000004c5 (sig0000019c)
+     begin scope: 'mycordic/blk0000011e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          37   0.204   0.488  sec_inst (sec_net)
+     end scope: 'mycordic/blk0000011e:S<17>'
+     LUT3:I2->O            1   0.061   0.357  blk000004cb (sig00000172)
+     begin scope: 'mycordic/blk0000017e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          30   0.204   0.486  sec_inst (sec_net)
+     end scope: 'mycordic/blk0000017e:S<18>'
+     LUT3:I2->O            2   0.061   0.362  blk000004d5 (sig00000147)
+     begin scope: 'mycordic/blk000001de:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          40   0.204   0.488  sec_inst (sec_net)
+     end scope: 'mycordic/blk000001de:S<19>'
+     LUT3:I2->O            1   0.061   0.357  blk000004da (sig0000011b)
+     begin scope: 'mycordic/blk0000023e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          29   0.204   0.486  sec_inst (sec_net)
+     end scope: 'mycordic/blk0000023e:S<20>'
+     LUT3:I2->O            2   0.061   0.362  blk000004e7 (sig000000ee)
+     begin scope: 'mycordic/blk0000029e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          43   0.204   0.489  sec_inst (sec_net)
+     end scope: 'mycordic/blk0000029e:S<21>'
+     LUT3:I2->O            1   0.061   0.357  blk000004eb (sig000000c0)
+     begin scope: 'mycordic/blk000002fe:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          28   0.204   0.486  sec_inst (sec_net)
+     end scope: 'mycordic/blk000002fe:S<22>'
+     LUT3:I2->O            2   0.061   0.362  blk000004fb (sig00000091)
+     begin scope: 'mycordic/blk0000035e:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          47   0.204   0.490  sec_inst (sec_net)
+     end scope: 'mycordic/blk0000035e:S<23>'
+     LUT3:I2->O            1   0.061   0.357  blk000004fe (sig00000061)
+     begin scope: 'mycordic/blk000003bd:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out          25   0.204   0.486  sec_inst (sec_net)
+     end scope: 'mycordic/blk000003bd:S<24>'
+     LUT2:I1->O            1   0.061   0.357  blk00000511 (sig00000030)
+     begin scope: 'mycordic/blk00000409:A<2>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.204   0.357  sec_inst (sec_net)
+     end scope: 'mycordic/blk00000409:S<25>'
+     begin scope: 'mycordic/blk00000458:B<0>'
+     SEC:in->out           1   0.061   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.248   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.017   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.204   0.000  sec_inst (sec_net)
+     SEC:in                   -0.002          sec_inst
+    ----------------------------------------
+    Total                     35.779ns (17.525ns logic, 18.254ns route)
+                                       (49.0% logic, 51.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_ip'
+  Total number of paths / destination ports: 234989273119 / 131
+-------------------------------------------------------------------------
+Offset:              14.718ns (Levels of Logic = 35)
+  Source:            Ic<20> (PAD)
+  Destination:       sign_I_Q_20 (FF)
+  Destination Clock: clk_ip rising
+
+  Data Path: Ic<20> to sign_I_Q_20
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   0.003   0.389  Ic_20_IBUF (Ic_20_IBUF)
+     DSP48E1:A20->P14      4   3.236   0.356  Mmult_Ic[20]_cos[15]_MuLt_54_OUT (Ic[20]_cos[15]_MuLt_54_OUT<14>)
+     INV:I->O              1   0.079   0.000  Msub_n0213_lut<14>_INV_0 (Msub_n0213_lut<14>)
+     MUXCY:S->O            1   0.248   0.000  Msub_n0213_cy<14> (Msub_n0213_cy<14>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_n0213_cy<15> (Msub_n0213_cy<15>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_n0213_cy<16> (Msub_n0213_cy<16>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_n0213_cy<17> (Msub_n0213_cy<17>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_n0213_cy<18> (Msub_n0213_cy<18>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_n0213_cy<19> (Msub_n0213_cy<19>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_n0213_cy<20> (Msub_n0213_cy<20>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_n0213_cy<21> (Msub_n0213_cy<21>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_n0213_cy<22> (Msub_n0213_cy<22>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_n0213_cy<23> (Msub_n0213_cy<23>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_n0213_cy<24> (Msub_n0213_cy<24>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_n0213_cy<25> (Msub_n0213_cy<25>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_n0213_cy<26> (Msub_n0213_cy<26>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_n0213_cy<27> (Msub_n0213_cy<27>)
+     XORCY:CI->O           1   0.204   0.339  Msub_n0213_xor<28> (n0213<28>)
+     INV:I->O              1   0.079   0.000  Msub_GND_1_o_unary_minus_59_OUT_lut<14>_INV_0 (Msub_GND_1_o_unary_minus_59_OUT_lut<14>)
+     MUXCY:S->O            1   0.248   0.000  Msub_GND_1_o_unary_minus_59_OUT_cy<14> (Msub_GND_1_o_unary_minus_59_OUT_cy<14>)
+     XORCY:CI->O           2   0.204   0.571  Msub_GND_1_o_unary_minus_59_OUT_xor<15> (GND_1_o_unary_minus_59_OUT<15>)
+     LUT6:I2->O            1   0.061   0.000  Madd_I_pll_lut<15> (Madd_I_pll_lut<15>)
+     MUXCY:S->O            1   0.248   0.000  Madd_I_pll_cy<15> (Madd_I_pll_cy<15>)
+     XORCY:CI->O           5   0.204   0.719  Madd_I_pll_xor<16> (I_pll<16>)
+     LUT6:I0->O            1   0.061   0.426  _n05411 (_n05411)
+     LUT6:I4->O            1   0.061   0.357  _n05416_SW0 (N2)
+     LUT6:I5->O            2   0.061   0.362  _n05416 (_n0541)
+     LUT2:I1->O           34   0.061   0.469  PWR_1_o_GND_1_o_mux_94_OUT<18>1 (PWR_1_o_GND_1_o_mux_94_OUT<18>)
+     DSP48E1:B16->PCOUT47    1   3.127   0.000  Mmult_n0239 (Mmult_n0239_PCOUT_to_Mmult_n02391_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.349   0.426  Mmult_n02391 (n0239<17>)
+     LUT2:I0->O            1   0.061   0.000  Msub_PWR_1_o_PWR_1_o_sub_102_OUT<20:0>_lut<17> (Msub_PWR_1_o_PWR_1_o_sub_102_OUT<20:0>_lut<17>)
+     MUXCY:S->O            1   0.248   0.000  Msub_PWR_1_o_PWR_1_o_sub_102_OUT<20:0>_cy<17> (Msub_PWR_1_o_PWR_1_o_sub_102_OUT<20:0>_cy<17>)
+     MUXCY:CI->O           1   0.017   0.000  Msub_PWR_1_o_PWR_1_o_sub_102_OUT<20:0>_cy<18> (Msub_PWR_1_o_PWR_1_o_sub_102_OUT<20:0>_cy<18>)
+     MUXCY:CI->O           0   0.017   0.000  Msub_PWR_1_o_PWR_1_o_sub_102_OUT<20:0>_cy<19> (Msub_PWR_1_o_PWR_1_o_sub_102_OUT<20:0>_cy<19>)
+     XORCY:CI->O           1   0.204   0.000  Msub_PWR_1_o_PWR_1_o_sub_102_OUT<20:0>_xor<20> (PWR_1_o_PWR_1_o_sub_102_OUT<20>)
+     FDC:D                    -0.002          sign_I_Q_20
+    ----------------------------------------
+    Total                     14.718ns (10.302ns logic, 4.416ns route)
+                                       (70.0% logic, 30.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_ip'
+  Total number of paths / destination ports: 21 / 21
+-------------------------------------------------------------------------
+Offset:              0.676ns (Levels of Logic = 1)
+  Source:            freq_part_20 (FF)
+  Destination:       freq_part<20> (PAD)
+  Source Clock:      clk_ip rising
+
+  Data Path: freq_part_20 to freq_part<20>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.317   0.356  freq_part_20 (freq_part_20)
+     OBUF:I->O                 0.003          freq_part_20_OBUF (freq_part<20>)
+    ----------------------------------------
+    Total                      0.676ns (0.320ns logic, 0.356ns route)
+                                       (47.3% logic, 52.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_ip
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_ip         |   35.779|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 17.04 secs
+ 
+--> 
+
+Total memory usage is 410096 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   25 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

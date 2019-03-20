@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Sep 14 16:02:30 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "J9" LEVEL 1;
+COMP "key" LOCATE = SITE "C22" LEVEL 1;
+COMP "rxd" LOCATE = SITE "J25" LEVEL 1;
+COMP "key1" LOCATE = SITE "L21" LEVEL 1;
+COMP "reset" LOCATE = SITE "D22" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "AD21" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "AH27" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "AE21" LEVEL 1;
+SCHEMATIC END;
+
